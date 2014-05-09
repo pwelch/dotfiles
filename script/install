@@ -42,7 +42,7 @@ install_solarized () {
 }
 
 install_fugitive () {
-  if ! [ -d $HOME/.janus/solarized ]
+  if ! [ -d $HOME/.janus/fugitive ]
   then
     info 'installing fugitive Vim Plugin'
     git clone git://github.com/tpope/vim-fugitive.git $HOME/.janus/fugitive
@@ -52,7 +52,19 @@ install_fugitive () {
   fi
 }
 
+install_airline () {
+  if ! [ -d $HOME/.janus/vim-airline ]
+  then
+    info 'installing airline Vim Plugin'
+    git clone  https://github.com/bling/vim-airline $HOME/.janus/vim-airline
+    success 'installed vim-airline Vim Plugin'
+  else
+    success 'Vim-airline vim Plugin already installed'
+  fi
+}
+
 install_ohmyzsh
 install_janus
 install_solarized
 install_fugitive
+install_airline
