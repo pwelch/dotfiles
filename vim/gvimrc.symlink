@@ -1,0 +1,5 @@
+" use solarized colorscheme
+colorscheme solarized
+
+" set dark background version of solarized
+set background=dark

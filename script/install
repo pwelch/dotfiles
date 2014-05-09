@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# Install plug-ins
+
+set -e
+
+# Install Oh-My-Zsh
+install_ohmyzsh () {
+  if ! [ -d $HOME/.oh-my-zsh ]
+  then
+    info 'installing oh-my-zsh'
+    wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+    success 'installed oh-my-zsh'
+  else
+    success 'oh-my-zsh already installed, remove $HOME/.oh-my-zsh if you want to install'
+  fi
+}
+
+# Install Janus
+install_janus () {
+  if ! [ -d $HOME/.vim/janus ]
+  then
+    info 'installing janus'
+    curl -Lo- https://bit.ly/janus-bootstrap | bash
+    success 'installed janus'
+    mkdir $HOME/.janus
+    success 'created $HOME/.janus for Vim plugins'
+  else
+    success 'janus already installed'
+  fi
+}
+
+# Install additional Vim plugins
+install_solarized () {
+  if ! [ -d $HOME/.janus/solarized ]
+  then
+    info 'installing Solarized Vim Plugin'
+    git clone git://github.com/altercation/solarized.git $HOME/.janus/solarized
+    success 'installed Solarized Vim Plugin'
+  else
+    success 'solarized Vim Plugin already installed'
+  fi
+}
+
+install_fugitive () {
+  if ! [ -d $HOME/.janus/solarized ]
+  then
+    info 'installing fugitive Vim Plugin'
+    git clone git://github.com/tpope/vim-fugitive.git $HOME/.janus/fugitive
+    success 'installed Fugitive Vim Plugin'
+  else
+    success 'Fugitive Vim Plugin already installed'
+  fi
+}
+
+install_ohmyzsh
+install_janus
+install_solarized
+install_fugitive
