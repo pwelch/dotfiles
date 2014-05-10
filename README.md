@@ -34,6 +34,12 @@ get
 symlinked without extension into `$HOME` when you run
 `script/bootstrap`.
 
+## Homebrew
+
+You can use the [Brewfile](http://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew) to install programs via [Homebrew](http://brew.sh) by running:
+
+`brew bundle`
+
 ## thanks
 
 These dotfiles are a collection of my own customizations and various
