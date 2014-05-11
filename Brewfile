@@ -1,3 +1,14 @@
+# Update to latest version of Homebrew
+update
+
+# Upgrade any already-installed formulae
+upgrade
+
+# Add brew-cask
+tap phinze/homebrew-cask
+install brew-cask
+
+# Install utilities
 install ack
 install ag
 install curl
@@ -21,3 +32,6 @@ install wget
 
 # For tmux on Mac OS X
 install reattach-to-user-namespace
+
+# Remove outdated verions from the cellar
+cleanup
