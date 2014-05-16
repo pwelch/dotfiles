@@ -68,7 +68,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbi
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Golang and Posgres App 9.3
-export PATH="/usr/local/go/bin:/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
+export PATH="/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 ## EC2 Tools
 #export JAVA_HOME="$(/usr/libexec/java_home)"
@@ -79,6 +79,9 @@ export PATH="/usr/local/go/bin:/Applications/Postgres93.app/Contents/MacOS/bin:$
 # GO Environment variables
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# $HOME/bin
+export PATH=$PATH:$HOME/bin
 
 ## Add aliases
 alias vi='vim'

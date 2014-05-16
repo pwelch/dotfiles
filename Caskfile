@@ -1,22 +1,26 @@
 # homebrew-casks
-install alfred
-install cloak
-install colloquy
-install dropbox
-install firefox
-install flux
-install google-chrome
-install grabbox
-install handbrake
-install heroku-toolbelt
-install iterm2
-install mysqlworkbench
-install onepassword
-install postgres
-install spectacle
-install wireshark
-install vlc
-install zterm
+cask install alfred
+cask install cloak
+cask install colloquy
+cask install dropbox
+cask install firefox
+cask install flux
+cask install google-chrome
+cask install grabbox
+cask install gpgtools
+cask install handbrake
+cask install heroku-toolbelt
+cask install iterm2
+cask install mysqlworkbench
+cask install onepassword
+cask install postgres
+cask install spectacle
+cask install wireshark
+cask install vlc
+cask install zterm
+
+# Silence warning if already installed
+# cask install dropbox 2> /dev/null
 
 # Install XQuartz
 #install xquartz

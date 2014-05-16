@@ -4,10 +4,6 @@ update
 # Upgrade any already-installed formulae
 upgrade
 
-# Add brew-cask
-tap phinze/homebrew-cask
-install brew-cask
-
 # Install utilities
 install ack
 install ag
@@ -32,6 +28,11 @@ install wget
 
 # For tmux on Mac OS X
 install reattach-to-user-namespace
+
+# Add brew-cask
+tap phinze/homebrew-cask
+install brew-cask
+
 
 # Remove outdated verions from the cellar
 cleanup
