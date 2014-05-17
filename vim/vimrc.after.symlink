@@ -3,6 +3,9 @@
 set background=dark
 colorscheme solarized
 
+" Reset highlighted search with enter
+nnoremap <CR> :let @/=""<CR><CR>
+
 " The Silver Searcher
 if executable('ag')
   " Use silver searcher in place of ack
