@@ -29,10 +29,12 @@ install wget
 # For tmux on Mac OS X
 install reattach-to-user-namespace
 
+# DNSmasq
+#install dnsmasq
+
 # Add brew-cask
 tap phinze/homebrew-cask
 install brew-cask
-
 
 # Remove outdated verions from the cellar
 cleanup

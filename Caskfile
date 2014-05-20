@@ -15,6 +15,7 @@ cask install mysqlworkbench
 cask install onepassword
 cask install postgres
 cask install spectacle
+cask install screenhero
 cask install wireshark
 cask install vlc
 cask install zterm
