@@ -40,6 +40,10 @@ You can use the [Brewfile](http://robots.thoughtbot.com/brewfile-a-gemfile-but-f
 
 `brew bundle && brew bundle Caskfile`
 
+## External Programs
+
+* [Jrnl](https://maebert.github.io/jrnl/)
+
 ## thanks
 
 These dotfiles are a collection of my own customizations and various

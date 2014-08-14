@@ -90,6 +90,9 @@ alias vi='vim'
 alias knife='nocorrect knife'
 alias iex='nocorrect iex'
 
+## Disable shell history for Jrnl
+HISTINGNORE="jrnl *"
+
 ### zsh functions
 # From: https://github.com/holman/dotfiles/blob/master/functions/extract
 # credit: http://nparikh.org/notes/zshrc.txt
