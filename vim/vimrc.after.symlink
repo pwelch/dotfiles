@@ -3,6 +3,9 @@
 set background=dark
 colorscheme solarized
 
+" Turn on spell check
+set spell
+
 " Reset highlighted search with enter
 nnoremap <CR> :let @/=""<CR><CR>
 
