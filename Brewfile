@@ -52,5 +52,9 @@ install brew-cask
 brew tap homebrew/binary
 brew install packer
 
+# Tmate
+brew tap nviennot/homebrew-tmate
+brew install tmate
+
 # Remove outdated verions from the cellar
 cleanup

@@ -14,6 +14,11 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributors = !$ZSH/bin/git-rank-contributors
         count   = !git shortlog -sn
+        div = divergence
+        l = !pretty_git_log
+        r = !git l -30
+        la = !git l --all
+        ra = !git r --all
 [color]
         diff = auto
         status = auto
