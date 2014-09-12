@@ -15,6 +15,15 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
+# vim movement keys for resizing panes
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# mouse mode to enable scrolling
+setw -g mode-mouse on
+
 # Additional Options
 set -g default-terminal "screen-256color"
 set-option -g   history-limit 100000
@@ -25,12 +34,13 @@ set-option -g   set-titles-string ' #I-#W '
 set-option -g   terminal-overrides 'xterm*:smcup@:rmcup@'
 
 # statusbar
-set-option -g   status-utf8 on
-set-option -g   status-interval 5
-set-option -g   status-justify left
-set-option -g   status-left-length 20
-set-option -g   status-left ' #h |'
-set-option -g   status-right ' | %Y-%m-%d %H:%M #[default]'
+set -g status-utf8 on
+set -g status-interval 5
+set -g status-justify left
+set -g status-left-length 40
+set -g status-right-length 60
+set -g status-left "#h: #[fg=default]#(sysctl -n vm.loadavg | sed -e 's/[{}]//g' | sed -e 's/^ *//' -e 's/ *$//') |"
+set -g status-right "| %Y-%m-%d %H:%M #[default]"
 
 # Window options
 set-window-option -g utf8 on
@@ -47,6 +57,12 @@ set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 # Zoom tmux pane with '+' key
 bind + resize-pane -Z
+
+# start window numbering at 1
+set -g base-index 1
+
+# turn on UTF8
+setw -g utf8 on
 
 ### COLOUR (Solarized dark theme)
 # https://github.com/altercation/solarized/blob/master/tmux/tmuxcolors-dark.conf
@@ -80,6 +96,3 @@ set-option -g display-panes-colour brightred #orange
 
 # clock
 set-window-option -g clock-mode-colour green #green
-
-# start window numbering at 1
-set -g base-index 1
