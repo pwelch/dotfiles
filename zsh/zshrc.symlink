@@ -83,13 +83,6 @@ export PATH=$PATH:$GOPATH/bin
 # $HOME/bin
 export PATH=$PATH:$HOME/bin
 
-## Add aliases
-alias vi='vim'
-
-## Stop zsh autocorrection
-alias knife='nocorrect knife'
-alias iex='nocorrect iex'
-
 ## Disable shell history for Jrnl
 HISTINGNORE="jrnl *"
 

@@ -10,6 +10,8 @@
   "journals": {
     "default": "~/Code/notebook/journal.txt",
     "work": "~/Code/notebook/worklog.txt",
+    "infosec": "~/Code/notebook/infosec.txt",
+    "research": "~/Code/notebook/research.txt",
     "dayone": "~/Backups/Journal.dayone"
   }
 }
