@@ -44,6 +44,10 @@ You can use the [Brewfile](http://robots.thoughtbot.com/brewfile-a-gemfile-but-f
 
 * [Jrnl](https://maebert.github.io/jrnl/)
 
+## Configs
+* [Solarized](http://ethanschoonover.com/solarized)
+* [base-16](https://github.com/chriskempson/base16)
+
 ## thanks
 
 These dotfiles are a collection of my own customizations and various
