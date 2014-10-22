@@ -19,6 +19,7 @@ install ag
 install curl
 install htop-osx
 install iperf
+install jq
 install macvim
 install mtr
 install nmap
