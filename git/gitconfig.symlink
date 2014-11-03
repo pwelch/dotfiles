@@ -42,6 +42,6 @@
 [help]
     autocorrect = 1
 [push]
-    default = tracking
+    default = simple
 [hub]
     protocol = https
