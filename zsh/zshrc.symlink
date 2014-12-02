@@ -61,20 +61,15 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbin:/opt/chefdk/bin:$HOME/.rvm/bin
+## Customize PATH
+# Default Path
+DEFAULT_PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbin:/opt/chefdk/bin:$HOME/.rvm/bin
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# Heroku Toolbelt, Golang and Postgres App 9.3
+APP_PATH="/usr/local/heroku/bin:/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin"
 
-### Golang and Posgres App 9.3
-export PATH="/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
-
-## EC2 Tools
-#export JAVA_HOME="$(/usr/libexec/java_home)"
-#export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
-#export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-#export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+# Export defaults
+export PATH="$DEFAULT_PATH:$APP_PATH"
 
 # GO Environment variables
 export GOPATH=$HOME/go
@@ -82,6 +77,12 @@ export PATH=$PATH:$GOPATH/bin
 
 # $HOME/bin
 export PATH=$PATH:$HOME/bin
+
+## EC2 Tools
+#export JAVA_HOME="$(/usr/libexec/java_home)"
+#export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
+#export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
+#export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 
 ## Disable shell history for Jrnl
 HISTINGNORE="jrnl *"
