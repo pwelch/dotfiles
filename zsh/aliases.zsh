@@ -7,3 +7,6 @@ alias be='bundle exec'
 # Stop zsh autocorrection
 alias knife='nocorrect knife'
 alias iex='nocorrect iex'
+
+# Custom scripts
+alias pause_music='osascript ~/Code/github/jxa-scripts/general/pause_all.scpt'

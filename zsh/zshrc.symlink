@@ -116,6 +116,7 @@ extract () {
     fi
 }
 
+# TODO: Find the correct command for OS X 10.10
 # Flush DNS cache on Mac OS X
 flush_dns_cache () {
   echo "DNS cache cleared..."
