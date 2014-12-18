@@ -63,7 +63,7 @@ source $ZSH/oh-my-zsh.sh
 
 ## Customize PATH
 # Default Path
-DEFAULT_PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/texbin:/opt/chefdk/bin:$HOME/.rvm/bin
+DEFAULT_PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/opt/chefdk/bin:$HOME/.rvm/bin
 
 # Heroku Toolbelt, Golang and Postgres App 9.3
 APP_PATH="/usr/local/heroku/bin:/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin"
