@@ -10,3 +10,5 @@ alias iex='nocorrect iex'
 
 # Custom scripts
 alias pause_music='osascript ~/Code/github/jxa-scripts/general/pause_all.scpt'
+alias work='osascript ~/Code/github/jxa-scripts/general/work.scpt'
+alias gtd='osascript ~/Code/github/jxa-scripts/general/gtd.scpt'
