@@ -42,10 +42,14 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-syntax enable   " Enable syntax highlighting
-set number      " Enable line numbers
-set spell       " Turn on spell check
-set nolist      " Turn off `set list` by default
+syntax enable     " Enable syntax highlighting
+set number        " Enable line numbers
+set spell         " Turn on spell check
+set nolist        " Turn off `set list` by default
+set shiftwidth=2  " size of an "indent"
+set expandtab     " always uses spaces instead of tab characters
+set smarttab      " make "tab" insert indents instead of tabs at the beginning of a line
+set expandtab     " always uses spaces instead of tab characters
 
 " set dark background version of solarized
 " In iTerm2, in Preferences -> Profiles -> Terminal, under "Terminal Emulation" set to xterm-256color.
