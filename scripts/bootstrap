@@ -120,7 +120,7 @@ install_dotfiles () {
   done
 }
 
-source script/install
+source scripts/install
 
 setup_gitconfig
 install_dotfiles

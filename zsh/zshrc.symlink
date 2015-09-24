@@ -131,3 +131,7 @@ prune_and_delete_merged() {
     git remote prune origin
     git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
 }
+
+# RVM
+[[ -s $HOME/.rvm ]] && PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+[[ -s $HOME/.rvm ]] && source $HOME/.rvm/scripts/rvm

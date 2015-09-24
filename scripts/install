@@ -4,19 +4,33 @@
 set -e
 
 # Install Oh-My-Zsh
-install_ohmyzsh () {
+install_ohmyzsh() {
   if ! [ -d $HOME/.oh-my-zsh ]
   then
     info 'installing oh-my-zsh'
     wget --no-check-certificate http://install.ohmyz.sh -O - | sh
     success 'installed oh-my-zsh'
+    # Change shell with sudo chsh vagrant -s /usr/bin/zsh
   else
     success 'oh-my-zsh already installed, remove $HOME/.oh-my-zsh if you want to install'
   fi
 }
 
+# Insatll Vim Vundle
+install_vundle() {
+  if ! [ -d $HOME/.vim/bundle ]
+  then
+    info 'installing Vundle Vim Plugin Manager'
+    git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+    exec vim +PluginInstall +qall
+    success 'installed Vundle Vim Plugin Manager'
+  else
+    success 'Vundle Vim Plugin Manager already installed. Remove $HOME/.vim/bundle to reinstall'
+  fi
+}
+
 # Install Janus
-install_janus () {
+install_janus() {
   if ! [ -d $HOME/.vim/janus ]
   then
     info 'installing janus'
@@ -30,7 +44,7 @@ install_janus () {
 }
 
 # Install additional Vim plugins
-install_solarized () {
+install_solarized() {
   if ! [ -d $HOME/.janus/solarized ]
   then
     info 'installing Solarized Vim Plugin'
@@ -41,7 +55,7 @@ install_solarized () {
   fi
 }
 
-install_fugitive () {
+install_fugitive() {
   if ! [ -d $HOME/.janus/fugitive ]
   then
     info 'installing fugitive Vim Plugin'
@@ -52,7 +66,7 @@ install_fugitive () {
   fi
 }
 
-install_airline () {
+install_airline() {
   if ! [ -d $HOME/.janus/vim-airline ]
   then
     info 'installing airline Vim Plugin'
@@ -64,7 +78,4 @@ install_airline () {
 }
 
 install_ohmyzsh
-install_janus
-install_solarized
-install_fugitive
-install_airline
+install_vundle
