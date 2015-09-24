@@ -59,11 +59,14 @@ colorscheme solarized
 " Reset highlighted search with enter
 nnoremap <CR> :let @/=""<CR><CR>
 
-" Shortcut to rapidly toggle `set list`
-" nmap <leader>l :set list!<CR>
-
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+
+" Shortcut to list buffers
+map <C-b> :ls<CR>
+
+" Shortcut to rapidly toggle `set list`
+" nmap <leader>l :set list!<CR>
 
 " Invisible character colors
 highlight NonText guifg=#4a4a59
@@ -73,9 +76,9 @@ highlight SpecialKey guifg=#4a4a59
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set working directory to the current file
-autocmd BufEnter * lcd %:p:h
+" autocmd BufEnter * lcd %:p:h
 
-" Map CtrlP to leader+p
+" Map CtrlP to Ctrl+p
 nmap <C-p> :CtrlP<CR>
 
 " Open NERDTree with Ctrl+n
