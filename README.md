@@ -34,12 +34,6 @@ get
 symlinked without extension into `$HOME` when you run
 `script/bootstrap`.
 
-## Homebrew
-
-You can use the [Brewfile](http://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew) to install programs via [Homebrew](http://brew.sh) by running:
-
-`brew bundle && brew bundle Caskfile`
-
 ## External Programs
 
 * [Jrnl](https://maebert.github.io/jrnl/)
@@ -54,4 +48,3 @@ These dotfiles are a collection of my own customizations and various
 other dotfiles projects. Check them out:
 
 * [@holman](https://github.com/holman/dotfiles)
-* [@keiththomps](https://github.com/keiththomps/dotfiles)
