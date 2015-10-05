@@ -63,7 +63,7 @@ source $ZSH/oh-my-zsh.sh
 
 ## Customize PATH
 # Default Path
-DEFAULT_PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/opt/chefdk/bin:$HOME/.rvm/bin
+DEFAULT_PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/texbin:/opt/chefdk/bin
 
 # Heroku Toolbelt, Golang and Postgres App 9.3
 APP_PATH="/usr/local/heroku/bin:/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin"
@@ -132,6 +132,6 @@ prune_and_delete_merged() {
     git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
 }
 
-# RVM
-[[ -s $HOME/.rvm ]] && PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-[[ -s $HOME/.rvm ]] && source $HOME/.rvm/scripts/rvm
+# RVM this is normally added to $HOME/.profile by RVM
+# [[ -s $HOME/.rvm ]] && PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+# [[ -s $HOME/.rvm ]] && source $HOME/.rvm/scripts/rvm
