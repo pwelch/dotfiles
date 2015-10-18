@@ -48,10 +48,16 @@ syntax enable     " Enable syntax highlighting
 set number        " Enable line numbers
 set spell         " Turn on spell check
 set nolist        " Turn off `set list` by default
+set showcmd       " show command in bottom bar
+set cursorline    " highlight current line
+set wildmenu      " visual autocomplete for command menu
+set showmatch     " highlight matching [{()}
 set shiftwidth=2  " size of an "indent"
 set expandtab     " always uses spaces instead of tab characters
 set smarttab      " make "tab" insert indents instead of tabs at the beginning of a line
 set expandtab     " always uses spaces instead of tab characters
+set tabstop=2     " number of visual spaces per TAB
+set softtabstop=2 " number of spaces in tab when editing
 
 " set dark background version of solarized
 " In iTerm2, in Preferences -> Profiles -> Terminal, under "Terminal Emulation" set to xterm-256color.
@@ -62,7 +68,6 @@ colorscheme solarized
 nnoremap <CR> :let @/=""<CR><CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
 
 " Enable vim-airline bar all the time
 set laststatus=2
