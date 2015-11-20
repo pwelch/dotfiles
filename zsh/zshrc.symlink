@@ -90,6 +90,7 @@ HISTINGNORE="jrnl *"
 ### zsh functions
 # Run chef-shell init
 chef-init () {
+  echo "Running chef shell-init zsh"
   eval "$(chef shell-init zsh)"
 }
 
