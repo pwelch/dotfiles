@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Run Backup Gem
+backup perform -t my_backup
