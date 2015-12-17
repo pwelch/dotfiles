@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+function update_homebrew () {
+  if [[ -x /usr/local/bin/brew ]]; then
+    echo 'Running Homebrew update and clean'
+    /usr/local/bin/brew update
+    /usr/local/bin/brew cleanup
+  fi
+}
+
+function update_rvm () {
+  if [[ -s $HOME/.rvm ]]; then
+    echo 'Getting latest RVM stable and cleaning up'
+    rvm get stable
+    rvm cleanup all
+  fi
+}
+
+main () {
+  update_homebrew
+  update_rvm
+}
+
+main $*
