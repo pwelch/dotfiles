@@ -16,6 +16,15 @@ function update_rvm () {
   fi
 }
 
+function update_gem () {
+  if [[ -s $HOME/.rvm ]]; then
+    echo 'Updating gem command and running cleanup'
+    gem update --system
+    gem cleanup
+    # 'gem stale' lists gems that have not been used lately
+  fi
+}
+
 main () {
   update_homebrew
   update_rvm
