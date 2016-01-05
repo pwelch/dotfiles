@@ -14,8 +14,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
-Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'bling/vim-airline'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'git@github.com:ck3g/vim-change-hash-syntax.git' " :ChangeHashSyntax
 
 " Language Syntax Plugins
 Plugin 'vim-ruby/vim-ruby'
