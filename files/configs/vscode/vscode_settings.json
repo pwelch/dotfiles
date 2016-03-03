@@ -1,0 +1,5 @@
+// VS Code Settings in this file to overwrite the default settings
+// Move to $HOME/Library/Application\ Support/Code/User/settings.json
+{
+    "editor.renderWhitespace": true
+}
