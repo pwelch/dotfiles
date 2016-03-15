@@ -1,6 +1,6 @@
 [user]
     name  = pwelch
-    email = paul@pwelch.net
+    email = git@pwelch.net
 [credential]
     helper = osxkeychain
 [alias]
@@ -50,6 +50,6 @@
    smudge = git media smudge %f
    required = true
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+   clean = git-lfs clean %f
+   smudge = git-lfs smudge %f
+   required = true
