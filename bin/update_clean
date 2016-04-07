@@ -28,6 +28,7 @@ function update_gem () {
 main () {
   update_homebrew
   update_rvm
+  update_gem
 }
 
 main $*
