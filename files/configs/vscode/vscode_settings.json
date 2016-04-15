@@ -1,5 +1,13 @@
 // VS Code Settings in this file to overwrite the default settings
 // Move to $HOME/Library/Application\ Support/Code/User/settings.json
+// Place your settings in this file to overwrite the default settings
 {
-    "editor.renderWhitespace": true
+  // Disable usage data and errors to be sent to Microsoft.
+  "telemetry.enableTelemetry": false,
+
+  // Show white space
+  "editor.renderWhitespace": true,
+
+  // The number of spaces a tab is equal to.
+  "editor.tabSize": 2
 }
