@@ -78,6 +78,24 @@ export PATH=$PATH:$GOPATH/bin
 # $HOME/bin
 export PATH=$PATH:$HOME/bin
 
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+  platform='linux'
+elif [[ "$unamestr" == 'FreeBSD' ]]; then
+  platform='freebsd'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+  platform='osx'
+fi
+
+if [[ $platform == 'linux' ]]; then
+  if [[ -d "$HOME/.linuxbrew" ]]; then
+    export PATH="$HOME/.linuxbrew/bin:$PATH"
+    export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+    export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+  fi
+fi
+
 ## EC2 Tools
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 #export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
@@ -100,26 +118,26 @@ chef-init () {
 # Description: extracts archived files / mounts disk images
 # Note: .dmg/hdiutil is Mac OS X-specific.
 extract () {
-    if [ -f $1 ]; then
-        case $1 in
-            *.tar.bz2)  tar -jxvf $1                        ;;
-            *.tar.gz)   tar -zxvf $1                        ;;
-            *.bz2)      bunzip2 $1                          ;;
-            *.dmg)      hdiutil mount $1                    ;;
-            *.gz)       gunzip $1                           ;;
-            *.tar)      tar -xvf $1                         ;;
-            *.tbz2)     tar -jxvf $1                        ;;
-            *.tgz)      tar -zxvf $1                        ;;
-            *.zip)      unzip $1                            ;;
-            *.ZIP)      unzip $1                            ;;
-            *.pax)      cat $1 | pax -r                     ;;
-            *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
-            *.Z)        uncompress $1                       ;;
-            *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
-        esac
-    else
-        echo "'$1' is not a valid file"
-    fi
+  if [ -f $1 ]; then
+    case $1 in
+      *.tar.bz2)  tar -jxvf $1                        ;;
+      *.tar.gz)   tar -zxvf $1                        ;;
+      *.bz2)      bunzip2 $1                          ;;
+      *.dmg)      hdiutil mount $1                    ;;
+      *.gz)       gunzip $1                           ;;
+      *.tar)      tar -xvf $1                         ;;
+      *.tbz2)     tar -jxvf $1                        ;;
+      *.tgz)      tar -zxvf $1                        ;;
+      *.zip)      unzip $1                            ;;
+      *.ZIP)      unzip $1                            ;;
+      *.pax)      cat $1 | pax -r                     ;;
+      *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
+      *.Z)        uncompress $1                       ;;
+      *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
 }
 
 # TODO: Find the correct command for OS X 10.10
@@ -132,10 +150,10 @@ flush_dns_cache () {
 # Clean up merged branches
 # From: https://github.com/keiththomps/dotfiles/blob/master/.githelpers
 prune_and_delete_merged() {
-    git checkout master
-    git pull --rebase
-    git remote prune origin
-    git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
+  git checkout master
+  git pull --rebase
+  git remote prune origin
+  git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
 }
 
 # RVM this is normally added to $HOME/.profile by RVM

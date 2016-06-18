@@ -9,7 +9,7 @@ Run this:
 ```sh
 git clone https://github.com/pwelch/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-script/bootstrap
+scripts/bootstrap
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home
