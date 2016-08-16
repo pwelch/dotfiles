@@ -34,7 +34,7 @@ set-option -g   set-titles-string ' #I-#W '
 set-option -g   terminal-overrides 'xterm*:smcup@:rmcup@'
 
 # statusbar
-set -g status-utf8 on
+# set -g status-utf8 on
 set -g status-interval 5
 set -g status-justify left
 set -g status-left-length 40
@@ -43,7 +43,7 @@ set -g status-left "🐧  #h: #[fg=default]#(sysctl -n vm.loadavg | sed -e 's/[{
 set -g status-right "| %Y-%m-%d %H:%M #[default]"
 
 # Window options
-set-window-option -g utf8 on
+# set-window-option -g utf8 on
 set-window-option -g monitor-activity on
 set-window-option -g xterm-keys on
 set-window-option -g automatic-rename on
@@ -62,7 +62,7 @@ bind + resize-pane -Z
 set -g base-index 1
 
 # turn on UTF8
-setw -g utf8 on
+# setw -g utf8 on
 
 ### COLOUR (Solarized dark theme)
 # https://github.com/altercation/solarized/blob/master/tmux/tmuxcolors-dark.conf
