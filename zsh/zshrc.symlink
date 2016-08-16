@@ -48,7 +48,9 @@ ZSH_THEME="robbyrussell"
 # oh-my-zsh plugins (~/.oh-my-zsh/plugins/*)
 # Custom plugins can be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
+  colored-man-pages
   bundler
+  extract
   git
   github
   knife
@@ -117,28 +119,44 @@ chef-init () {
 # Usage: extract <file>
 # Description: extracts archived files / mounts disk images
 # Note: .dmg/hdiutil is Mac OS X-specific.
-extract () {
-  if [ -f $1 ]; then
-    case $1 in
-      *.tar.bz2)  tar -jxvf $1                        ;;
-      *.tar.gz)   tar -zxvf $1                        ;;
-      *.bz2)      bunzip2 $1                          ;;
-      *.dmg)      hdiutil mount $1                    ;;
-      *.gz)       gunzip $1                           ;;
-      *.tar)      tar -xvf $1                         ;;
-      *.tbz2)     tar -jxvf $1                        ;;
-      *.tgz)      tar -zxvf $1                        ;;
-      *.zip)      unzip $1                            ;;
-      *.ZIP)      unzip $1                            ;;
-      *.pax)      cat $1 | pax -r                     ;;
-      *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
-      *.Z)        uncompress $1                       ;;
-      *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
+# extract () {
+#   if [ -f $1 ]; then
+#     case $1 in
+#       *.tar.bz2)  tar -jxvf $1                        ;;
+#       *.tar.gz)   tar -zxvf $1                        ;;
+#       *.bz2)      bunzip2 $1                          ;;
+#       *.dmg)      hdiutil mount $1                    ;;
+#       *.gz)       gunzip $1                           ;;
+#       *.tar)      tar -xvf $1                         ;;
+#       *.tbz2)     tar -jxvf $1                        ;;
+#       *.tgz)      tar -zxvf $1                        ;;
+#       *.zip)      unzip $1                            ;;
+#       *.ZIP)      unzip $1                            ;;
+#       *.pax)      cat $1 | pax -r                     ;;
+#       *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
+#       *.Z)        uncompress $1                       ;;
+#       *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
+#     esac
+#   else
+#     echo "'$1' is not a valid file"
+#   fi
+# }
+# Disabled in favor of oh-my-zsh plugin for now.
+
+# Colored Man Pages
+# http://boredzo.org/blog/archives/2016-08-15/colorized-man-pages-understood-and-customized
+# cman() {
+#   env \
+#     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+#     LESS_TERMCAP_md=$(printf "\e[1;31m") \
+#     LESS_TERMCAP_me=$(printf "\e[0m") \
+#     LESS_TERMCAP_se=$(printf "\e[0m") \
+#     LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+#     LESS_TERMCAP_ue=$(printf "\e[0m") \
+#     LESS_TERMCAP_us=$(printf "\e[1;32m") \
+#     man "$@"
+# }
+# Disabled in favor of oh-my-zsh plugin for now.
 
 # TODO: Find the correct command for OS X 10.10
 # Flush DNS cache on Mac OS X
