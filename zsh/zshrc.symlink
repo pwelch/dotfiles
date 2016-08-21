@@ -169,6 +169,14 @@ prune_and_delete_merged() {
   git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
 }
 
-# RVM this is normally added to $HOME/.profile by RVM
+weather() {
+  curl -s http://wttr.in/$1
+}
+
+weather_short() {
+  curl -s http://wttr.in/$1 | head -7
+}
+
+# RVM.this is normally added to $HOME/.profile by RVM
 # [[ -s $HOME/.rvm ]] && PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 # [[ -s $HOME/.rvm ]] && source $HOME/.rvm/scripts/rvm
