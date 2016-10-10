@@ -1,0 +1,10 @@
+// ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+  // The number of spaces a tab is considered equal to
+  "tab_size": 2,
+}
+
+// Setup CLI
+// ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"  ~/bin/subl
