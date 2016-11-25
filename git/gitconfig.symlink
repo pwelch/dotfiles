@@ -17,6 +17,7 @@
     ra = !git r --all
     count = !git shortlog -sn
     div = divergence
+	  please = push --force-with-lease
 
     # data analysis
     authors = !git log --format="%aN"
