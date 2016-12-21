@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+main () {
+  if [[ "$EUID" -ne 0 ]]; then
+    echo "*** WARNING Requires running as root"
+    exit 1
+  fi
+
+  chkrootkit     # brew install chkrootkit
+  lynis --quick  # brew install lynis
+}
+
+main $*
