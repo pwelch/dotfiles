@@ -52,7 +52,6 @@ plugins=(
   bundler
   extract
   git
-  github
   knife
   knife_ssh
   osx
