@@ -49,6 +49,7 @@ filetype plugin indent on    " required
 syntax enable     " Enable syntax highlighting
 set number        " Enable line numbers
 set spell         " Turn on spell check
+set paste         " Default to paste insert
 set nolist        " Turn off `set list` by default
 set showcmd       " show command in bottom bar
 set cursorline    " highlight current line
