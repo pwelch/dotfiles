@@ -2,9 +2,12 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-  // The number of spaces a tab is considered equal to
+  "color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+  "dictionary": "Packages/Language - English/en_US.dic",
+  "font_size": 18,
+  "spell_check": true,
   "tab_size": 2,
-  "spell_check":true
+  "trim_trailing_white_space_on_save": true
 }
 
 // Setup CLI

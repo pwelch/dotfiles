@@ -6,8 +6,18 @@
   "telemetry.enableTelemetry": false,
 
   // Show white space
-  "editor.renderWhitespace": true,
+  "editor.renderWhitespace": "boundary",
+
+  // Remove white space
+  "files.trimTrailingWhitespace": true,
 
   // The number of spaces a tab is equal to.
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+
+  // Set Default Theme
+  "workbench.colorTheme": "Solarized Dark",
+
+  "workbench.startupEditor": "newUntitledFile",
+  "window.zoomLevel": 1,
 }
+
