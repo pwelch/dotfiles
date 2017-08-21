@@ -1,6 +1,7 @@
-set nocompatible       " be iMproved, required
-filetype off           " required
-
+" .vimrc
+"" Vundle
+set nocompatible " be iMproved, required
+filetype off     " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -10,18 +11,18 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Vim Plugins
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 Plugin 'git@github.com:ck3g/vim-change-hash-syntax.git' " :ChangeHashSyntax
-Plugin 'godlygeek/tabular'
+Plugin 'godlygeek/tabular'                              " :Tabularize
 
 " Language Syntax Plugins
-Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'       " CTRL-X CTRL-O insert mode for autocomplete
 Plugin 'tpope/vim-rails'
 Plugin 'skwp/vim-rspec'
 Plugin 'elixir-lang/vim-elixir'
@@ -33,11 +34,8 @@ Plugin 'mmalecki/vim-node.js'
 Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+call vundle#end()         " required
+filetype plugin indent on " required (ignore plugin indent changes)
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -47,6 +45,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+"" Vim Preferences
 syntax enable     " Enable syntax highlighting
 set number        " Enable line numbers
 set spell         " Turn on spell check
@@ -66,57 +65,64 @@ set showmatch     " highlight matching [{()}]
 set nohlsearch    " Highlight search terms
 set incsearch     " Show search matches incrementally
 set ignorecase    " Ignore case when searching
+set visualbell    " Use visual bell (no beeping)
 
-" set dark background version of solarized
-" In iTerm2, in Preferences -> Profiles -> Terminal, under "Terminal Emulation" set to xterm-256color.
-set background=dark
-colorscheme solarized
-
+"" Custom Maps
+" Ensure default leader is set to \
+let mapleader = "\\"
 " Reset highlighted search with enter
 nnoremap <CR> :let @/=""<CR><CR>
-
-" Use the same symbols as TextMate for tabstops and EOLs
-
-" Enable vim-airline bar all the time
-set laststatus=2
-
 " Shortcut to list buffers
 map <C-b> :ls<CR>
-
 " Shortcut to rapidly toggle `set list`
 " nmap <leader>l :set list!<CR>
+" jk as escape
+" inoremap jk <esc>
+" Set working directory to the current file
+" autocmd BufEnter * lcd %:p:h
+
+"" Plugin Configurations and Maps
+" Enable vim-airline bar all the time
+set laststatus=2
+" Map CtrlP to Ctrl+p
+nmap <C-p> :CtrlP<CR>
+" Open NERDTree with Ctrl+n
+map <C-n> :NERDTreeToggle<CR>
 
 " Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
-" Remove Whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+"" Backups
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
 
-" Set working directory to the current file
-" autocmd BufEnter * lcd %:p:h
+"" Set Color Scheme
+" set dark background version of solarized
+" In iTerm2, in Preferences -> Profiles -> Terminal, under "Terminal Emulation" set to xterm-256color.
+set background=dark
+colorscheme solarized
 
-" Map CtrlP to Ctrl+p
-nmap <C-p> :CtrlP<CR>
-
-" Open NERDTree with Ctrl+n
-map <C-n> :NERDTreeToggle<CR>
+"" Remove Whitespace
+augroup whitespace
+  autocmd BufWritePre * :%s/\s\+$//e
+augroup END
+" Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+match ExtraWhitespace /\s\+$/
 
 "" Functions
 " The Silver Searcher
 if executable('ag')
   " Use silver searcher in place of ack
   let g:ackprg = 'ag --nogroup --nocolor --column'
-
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
-
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-
-"" TODO: Add to functions
-" Tabular align Ruby 1.9 hashses: :Tabularize/\(:.*\)\@<!:\zs /l0
