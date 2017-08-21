@@ -18,6 +18,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'git@github.com:ck3g/vim-change-hash-syntax.git' " :ChangeHashSyntax
+Plugin 'godlygeek/tabular'
 
 " Language Syntax Plugins
 Plugin 'vim-ruby/vim-ruby'
@@ -54,13 +55,17 @@ set nolist        " Turn off `set list` by default
 set showcmd       " show command in bottom bar
 set cursorline    " highlight current line
 set wildmenu      " visual autocomplete for command menu
-set showmatch     " highlight matching [{()}
-set shiftwidth=2  " size of an "indent"
-set expandtab     " always uses spaces instead of tab characters
 set smarttab      " make "tab" insert indents instead of tabs at the beginning of a line
 set expandtab     " always uses spaces instead of tab characters
+set shiftwidth=2  " size of an "indent"
 set tabstop=2     " number of visual spaces per TAB
 set softtabstop=2 " number of spaces in tab when editing
+set autoindent    " Automatically indent
+set copyindent    " Copy the previous line's indenting
+set showmatch     " highlight matching [{()}]
+set nohlsearch    " Highlight search terms
+set incsearch     " Show search matches incrementally
+set ignorecase    " Ignore case when searching
 
 " set dark background version of solarized
 " In iTerm2, in Preferences -> Profiles -> Terminal, under "Terminal Emulation" set to xterm-256color.
@@ -112,3 +117,6 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+"" TODO: Add to functions
+" Tabular align Ruby 1.9 hashses: :Tabularize/\(:.*\)\@<!:\zs /l0
