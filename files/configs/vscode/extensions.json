@@ -1,0 +1,23 @@
+
+{
+  "recommendations": [
+    "Pendrica.Chef,
+    "PeterJausovec.vscode-docker,
+    "deerawan.vscode-dash,
+    "denisgerguri.hunspell-spellchecker,
+    "donjayamanne.python,
+    "ecmel.vscode-html-css,
+    "fbosch.battery-indicator,
+    "formulahendry.code-runner,
+    "lukehoban.Go,
+    "mjmcloug.vscode-elixir,
+    "ms-vscode.PowerShell,
+    "rebornix.Ruby,
+    "rid9.datetime,
+    "salesforce.salesforcedx-vscode,
+    "sianglim.slim,
+    "swyphcosmo.spellchecker,
+    "vscodevim.vim,
+    "yuce.erlang-otp
+  ]
+}

@@ -1,6 +1,9 @@
 // VS Code Settings in this file to overwrite the default settings
 // Move to $HOME/Library/Application\ Support/Code/User/settings.json
 // Place your settings in this file to overwrite the default settings
+//
+// code --list-extensions to list extensions
+// code --install-extension EXTENSION_NAME to install extension
 {
   // Disable usage data and errors to be sent to Microsoft.
   "telemetry.enableTelemetry": false,
