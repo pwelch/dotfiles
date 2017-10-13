@@ -1,38 +1,55 @@
-# Sample gitconfig
-#
-
-[hub]
-        protocol = https
 [user]
-        name = AUTHORNAME
-        email = AUTHOREMAIL
+    name  = pwelch
+    email = git@pwelch.net
 [credential]
-        helper = GIT_CREDENTIAL_HELPER
+    helper = osxkeychain
 [alias]
-        co = checkout
-        promote = !$ZSH/bin/git-promote
-        wtf     = !$ZSH/bin/git-wtf
-        rank-contributors = !$ZSH/bin/git-rank-contributors
-        count   = !git shortlog -sn
+    st = status
+    co = checkout
+    di = diff
+    dc = diff --cached
+    aa = add --all
+    ff = merge --ff-only
+    pu = push -u
+    l  = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)'
+    la = !git l --all
+    r  = !git l -30
+    ra = !git r --all
+    count = !git shortlog -sn
+    div = divergence
+	  please = push --force-with-lease
+
+    # data analysis
+    authors = !git log --format="%aN"
+    emails = !git log --format="%aE"
+    unique-authors = !git authors | sort -u
+    ranked-authors = !git authors | sort | uniq -c | sort -n
+    email-domains = !git log --format="%aE" | awk -F'@' '{print $2}'
+    unique-email-domains = !git email-domains | sort -u
+    ranked-email-domains = !git email-domains | sort | uniq -c | sort -n
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
 [core]
-        excludesfile = ~/.gitignore
-        editor = vim
+    editor = vim
+    pager  = less -r
+    excludesfile = ~/.gitignore
 [apply]
-        whitespace = nowarn
-[mergetool]
-        keepBackup = false
-[difftool]
-        prompt = false
+    whitespace = nowarn
+[merge]
+    tool = vimdiff
 [help]
-        autocorrect = 1
+    autocorrect = 1
 [push]
-        # See `git help config` (search for push.default)
-        # for more information on different options of the below setting.
-        #
-        # Setting to git 2.0 default to surpress warning message
-        default = simple
+    default = simple
+[filter "media"]
+   clean = git media clean %f
+   smudge = git media smudge %f
+   required = true
+[filter "lfs"]
+   clean = git-lfs clean %f
+   smudge = git-lfs smudge %f
+   required = true
+   process = git-lfs filter-process
