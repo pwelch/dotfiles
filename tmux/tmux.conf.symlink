@@ -1,9 +1,9 @@
 # .tmux.conf
 
 # Set the prefix to Ctrl+a
-set-option -g   prefix C-a
-unbind C-b
-bind-key C-a    send-prefix
+# set-option -g   prefix C-a
+# unbind C-b
+# bind-key C-a    send-prefix
 
 # Enable vi keys
 set -g mode-keys vi

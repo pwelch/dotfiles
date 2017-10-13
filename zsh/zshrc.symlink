@@ -179,3 +179,6 @@ weather_short() {
 # RVM.this is normally added to $HOME/.profile by RVM
 # [[ -s $HOME/.rvm ]] && PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 # [[ -s $HOME/.rvm ]] && source $HOME/.rvm/scripts/rvm
+
+# added by travis gem
+[ -f /Users/pwelch/.travis/travis.sh ] && source /Users/pwelch/.travis/travis.sh
