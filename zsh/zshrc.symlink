@@ -48,19 +48,23 @@ ZSH_THEME="robbyrussell"
 # oh-my-zsh plugins (~/.oh-my-zsh/plugins/*)
 # Custom plugins can be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
-  colored-man-pages
+  asdf
+  aws
   bundler
+  colored-man-pages
   extract
   git
-  knife
-  knife_ssh
   osx
   ruby
-  rails
   tmux
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Set History
+HISTSIZE=1000
+SAVEHIST=1000
 
 ## Customize PATH
 # Default Path
@@ -151,13 +155,6 @@ chef-init () {
 #     man "$@"
 # }
 # Disabled in favor of oh-my-zsh plugin for now.
-
-# TODO: Find the correct command for OS X 10.10
-# Flush DNS cache on Mac OS X
-flush_dns_cache () {
-  echo "DNS cache cleared..."
-  dscacheutil -flushcache
-}
 
 # Clean up merged branches
 # From: https://github.com/keiththomps/dotfiles/blob/master/.githelpers
