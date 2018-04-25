@@ -70,8 +70,8 @@ SAVEHIST=1000
 # Default Path
 DEFAULT_PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/usr/texbin
 
-# Heroku Toolbelt, Golang and Postgres App
-APP_PATH="/usr/local/heroku/bin:/usr/local/go/bin:/Applications/Postgres.app/Contents/Versions/latest/bin"
+# Heroku Toolbelt, Golang
+APP_PATH="/usr/local/heroku/bin:/usr/local/go/bin"
 
 # Export defaults
 export PATH="$DEFAULT_PATH:$APP_PATH"
@@ -93,17 +93,11 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
   platform='osx'
 fi
 
-# Linuxbrew
-if [[ $platform == 'linux' ]]; then
-  if [[ -d "$HOME/.linuxbrew" ]]; then
-    export PATH="$HOME/.linuxbrew/bin:$PATH"
-    export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-    export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-  fi
-fi
-
 ## Disable shell history for Jrnl
 HISTINGNORE="jrnl *"
+
+# direnv hook
+eval "$(direnv hook zsh)"
 
 ### zsh functions
 # Run chef-shell init
@@ -167,10 +161,6 @@ prune_and_delete_merged() {
 
 weather() {
   curl -s http://wttr.in/$1
-}
-
-weather_short() {
-  curl -s http://wttr.in/$1 | head -7
 }
 
 # added by travis gem
