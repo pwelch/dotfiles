@@ -1,9 +1,0 @@
-#!/bin/bash
-
-IFS=$(echo -en "\n\b")
-for i in `/Applications/VMware\ Fusion.app/Contents/Library/vmrun list | grep vmx$`
-do
-  vmx=`basename $i`
-  ip=`/Applications/VMware\ Fusion.app/Contents/Library/vmrun getGuestIpAddress $i`
-  printf '%-15s : %-55s\n' $ip $vmx
-done

@@ -3,6 +3,25 @@
 
 set -e
 
+# Helper functions
+info () {
+  printf "  [ \033[00;34m..\033[0m ] $1"
+}
+
+user () {
+  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+}
+
+success () {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+fail () {
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+  echo ''
+  exit
+}
+
 # Detect platform
 platform='unknown'
 unamestr=`uname`
@@ -37,54 +56,6 @@ install_vundle() {
     success 'installed Vundle Vim Plugin Manager'
   else
     success 'Vundle Vim Plugin Manager already installed. Remove $HOME/.vim/bundle to reinstall'
-  fi
-}
-
-# Install Janus
-install_janus() {
-  if ! [ -d $HOME/.vim/janus ]
-  then
-    info 'installing janus'
-    curl -Lo- https://bit.ly/janus-bootstrap | bash
-    success 'installed janus'
-    mkdir $HOME/.janus
-    success 'created $HOME/.janus for Vim plugins'
-  else
-    success 'janus already installed'
-  fi
-}
-
-# Install additional Vim plugins
-install_solarized() {
-  if ! [ -d $HOME/.janus/solarized ]
-  then
-    info 'installing Solarized Vim Plugin'
-    git clone git://github.com/altercation/solarized.git $HOME/.janus/solarized
-    success 'installed Solarized Vim Plugin'
-  else
-    success 'solarized Vim Plugin already installed'
-  fi
-}
-
-install_fugitive() {
-  if ! [ -d $HOME/.janus/fugitive ]
-  then
-    info 'installing fugitive Vim Plugin'
-    git clone git://github.com/tpope/vim-fugitive.git $HOME/.janus/fugitive
-    success 'installed Fugitive Vim Plugin'
-  else
-    success 'Fugitive Vim Plugin already installed'
-  fi
-}
-
-install_airline() {
-  if ! [ -d $HOME/.janus/vim-airline ]
-  then
-    info 'installing airline Vim Plugin'
-    git clone  https://github.com/bling/vim-airline $HOME/.janus/vim-airline
-    success 'installed vim-airline Vim Plugin'
-  else
-    success 'Vim-airline vim Plugin already installed'
   fi
 }
 
