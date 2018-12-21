@@ -167,8 +167,8 @@ weather() {
 [ -f /Users/pwelch/.travis/travis.sh ] && source /Users/pwelch/.travis/travis.sh
 
 # asdf
-# . $HOME/.asdf/asdf.sh
-# . $HOME/.asdf/completions/asdf.bash
+#. $HOME/.asdf/asdf.sh
+#. $HOME/.asdf/completions/asdf.bash
 source /usr/local/opt/asdf/asdf.sh # asdf installed via homebrew
 
 # ChefDK
