@@ -1,10 +1,10 @@
 # Brewfile
 
-# 
+#
 # xcode-select --install
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # brew bundle --verbose
-# 
+#
 
 # packaage manager
 brew "asdf"
@@ -14,57 +14,77 @@ brew "asdf"
 # asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 # languages
-brew "go"
-brew "elixir"
-brew "rust"
+brew "clisp"
 brew "crystal"
+brew "elixir"
+brew "go"
 brew "lua"
+brew "protobuf"
+brew "r"
+brew "rust"
 
 # tools
-brew "curl"
 brew "coreutils"
+brew "curl"
+brew "direnv"
 brew "git"
-brew "the_silver_searcher"
-brew "wget"
+brew "gpg"
 brew "htop-osx"
 brew "httpie"
+brew "hub"
+brew "hugo"
+brew "iftop"
+brew "ipcalc"
 brew "iperf"
-brew "gpg"
 brew "jq"
 brew "jrnl"
+brew "lynx"
+brew "macvim"
+brew "mtr"
 brew "mtr"
 brew "openssl"
-brew "siege"
-brew "sl"
-brew "stow"
-brew "sqlite"
-brew "ssh-copy-id"
-brew "tmux"
-brew "tree"
-brew "watch"
-brew "youtube-dl"
+brew "pandoc"
 brew "pass"
 brew "reattach-to-user-namespace"
+brew "siege"
+brew "sl"
+brew "sqlite"
+brew "ssh-copy-id"
+brew "stow"
+brew "the_silver_searcher"
+brew "tig"
+brew "tmux"
+brew "tree"
 brew "vim"
+brew "watch"
+brew "weechat"
+brew "wget"
+brew "youtube-dl"
+brew "zeromq"
 brew "zsh"
 
 # devops tools
-brew "awscli"
-brew "terraform"
-brew "packer"
 brew "ansible"
+brew "awscli"
+brew "heroku/brew/heroku"
+brew "kubernetes-cli"
+brew "packer"
+brew "terraform"
 cask "chef/chef/chefdk"
 
+# misc
+brew "exercism"
+
 # casks
+cask "spotify"
 cask "vlc"
 cask "zterm"
-cask "spotify"
 
 # infosec tools
 brew "chkrootkit"
-brew "yara"
 brew "nmap"
+brew "yara"
 
 # games
-brew "vitetris"
 brew "nethack"
+brew "vitetris"
