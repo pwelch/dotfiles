@@ -8,6 +8,8 @@ Run this:
 git clone https://github.com/pwelch/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
+brew bundle
+
 # Install GNU Stow
 brew install stow
 
