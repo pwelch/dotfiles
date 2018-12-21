@@ -6,6 +6,7 @@
 # brew bundle --verbose
 #
 
+
 # packaage manager
 brew "asdf"
 # asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
