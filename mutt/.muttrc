@@ -1,0 +1,19 @@
+# .muttrc (gmail on macOS)
+set imap_user = "USER@EMAIL.COM"
+set imap_pass = "PASSWORD.OR.APP_PASSWORD"
+set smtp_url  = "smtp://USER@EMAIL.COM@smtp.gmail.com:587/"
+set smtp_pass = "PASSWORD.OR.APP_PASSWORD"
+set from      = "USER@EMAIL.COM"
+set realname  = "FIRST LAST"
+
+set editor = "vim"
+
+# Gmail
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+set certificate_file = ~/.mutt/certificates
+set move = no
+set smtp_authenticators = 'gssapi:login'
