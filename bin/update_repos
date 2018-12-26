@@ -1,0 +1,58 @@
+#!/bin/bash
+
+## Global Variables
+readonly PROGDIR=`pwd`
+readonly PROGNAME=$(basename $0)
+
+## Functions
+update_repos() {
+  local _dir=$1; shift
+  cd $_dir
+
+  declare -a REPOS
+  REPOS=($(ls -d */))
+
+  for i in "${REPOS[@]}"; do
+    cd $i
+    if [[ -d .git/ ]]; then
+      echo "Updating git repo in ${i}"
+      git checkout master
+      git fetch
+      git merge --ff-only
+      echo "git exists"
+    else
+      echo "No git repo found in ${i}. Moving on..."
+    fi
+    cd -
+  done
+}
+
+usage() {
+  cat <<-EOF
+  usage: $PROGNAME /path/to/directory
+
+  Loops through subdirectories and updates the git repos from master if they exist.
+EOF
+  exit 0
+}
+
+## Main
+main() {
+  if [[ "$@" == "-h" ]];  then usage; fi
+  if [[ $# -eq 0 ]]; then
+    echo "Path to directory required"
+    exit 1
+  fi
+
+  local _dir_of_repos=$1; shift
+
+  if [[ ! -d $_dir_of_repos ]]; then
+    echo "Argument must be directory"
+    exit 1
+  fi
+
+  update_repos $_dir_of_repos
+  cd $PROGDIR
+}
+
+main $@

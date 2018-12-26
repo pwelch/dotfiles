@@ -1,0 +1,56 @@
+#!/bin/bash
+
+## Global Variables
+readonly PROGNAME=$(basename "$0")
+readonly DATETIME=$(date "+%Y%m%d")
+readonly NOTES_FILE="$HOME/Code/notebook/notes.md"
+
+function add() {
+  if [ ! -z "$1" ]; then
+    # Using the "$@" here will take all parameters passed into
+    # this function so we can place everything into our file.
+    echo "" >> "$NOTES_FILE"
+    echo "$@" >> "$NOTES_FILE"
+  else
+    # If no arguments were passed we will take STDOUT and place
+    # it into our notes instead.
+    echo "" >> "$NOTES_FILE"
+    cat - >> "$NOTES_FILE"
+  fi
+}
+
+function show() {
+  cat "$NOTES_FILE"
+  exit 0
+}
+
+function usage() {
+  cat <<-EOF
+  usage: $PROGNAME
+
+  Simple note taking script.
+
+  -h  Shows this help message.
+  -s  Prints out notes file.
+
+  Example Usage:
+  Quick note:
+    $PROGNAME "Note content"
+
+  Long note using heredoc:
+    $PROGNAME <<NOTE
+    This is a very long note because
+    sometimes you need more space.
+    NOTE
+EOF
+  exit 0
+}
+
+function main() {
+  if [ "$1" == "-h" ]; then usage; fi
+  if [ "$1" == "-s" ]; then show; fi
+
+  add "$@"
+}
+
+main "$@"
