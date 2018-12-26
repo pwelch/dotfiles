@@ -107,14 +107,15 @@ brew "zsh"
 # devops tools
 brew "ansible"
 brew "awscli"
-cask "google-cloud-sdk"
-tap  "heroku/brew"
-brew "heroku/brew/heroku"
 brew "kops"
 brew "kubernetes-cli"
 brew "packer"
 brew "terraform"
+
 cask "chef/chef/chefdk"
+cask "google-cloud-sdk"
+tap  "heroku/brew"
+brew "heroku/brew/heroku"
 
 # misc
 brew "exercism"
@@ -130,6 +131,5 @@ brew "nmap"
 brew "yara"
 
 # games
-brew "nethack"
-brew "vitetris"
-brew "zork"
+%w{ nethack vitetris zork }.each { |pkg| brew pkg }
+
