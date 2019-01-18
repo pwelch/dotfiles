@@ -169,3 +169,6 @@ export PATH="/opt/chefdk/bin:$PATH"
 if [[ -a ~/.localrc ]]; then
   source ~/.localrc
 fi
+
+# iTerm 2 Autocomplete Suggestions/Touch Bar integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
