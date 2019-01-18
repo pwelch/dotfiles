@@ -1,3 +1,4 @@
+#
 # code --list-extensions | sort > extensions.txt
 # code --list-extensions to list extensions
 # code --install-extension EXTENSION_NAME to install extension
