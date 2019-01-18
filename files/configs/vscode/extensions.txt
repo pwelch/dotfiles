@@ -1,0 +1,27 @@
+# code --list-extensions | sort > extensions.txt
+# code --list-extensions to list extensions
+# code --install-extension EXTENSION_NAME to install extension
+
+Pendrica.chef
+PeterJausovec.vscode-docker
+castwide.solargraph
+deerawan.vscode-dash
+fbosch.battery-indicator
+felixrieseberg.vsc-ember-cli
+mauve.terraform
+mjmcloug.vscode-elixir
+ms-python.python
+ms-vscode.Go
+ms-vscode.PowerShell
+ms-vscode.azurecli
+pgourlain.erlang
+rebornix.ruby
+run-at-scale.terraform-doc-snippets
+salesforce.salesforcedx-vscode
+salesforce.salesforcedx-vscode-apex
+salesforce.salesforcedx-vscode-apex-debugger
+salesforce.salesforcedx-vscode-apex-replay-debugger
+salesforce.salesforcedx-vscode-core
+salesforce.salesforcedx-vscode-lightning
+salesforce.salesforcedx-vscode-visualforce
+vscodevim.vim
