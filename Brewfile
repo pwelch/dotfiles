@@ -129,6 +129,7 @@ brew "exercism"
 
 # casks
 cask "alfred"
+cask "balenaetcher"
 cask "boostnote"
 cask "cryptomator"
 cask "cyberduck"
@@ -144,6 +145,12 @@ cask "spotify"
 cask "transmission"
 cask "vlc"
 cask "zterm"
+
+# objective-see
+cask "blockblock"
+cask "kextviewr"
+cask "knockknock"
+cask "taskexplorer"
 
 # infosec tools
 brew "chkrootkit"
