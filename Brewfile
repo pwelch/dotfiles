@@ -47,6 +47,10 @@ brew "rebar"
 cask "rstudio"
 brew "rust"
 
+# Use OpenJDK over Oracle Java
+tap "AdoptOpenJDK/openjdk"
+cask "adoptopenjdk11"
+
 # tools
 brew "ack"
 brew "azure-cli"
@@ -116,6 +120,7 @@ brew "terraform"
 
 cask "chef/chef/chefdk"
 cask "google-cloud-sdk"
+cask "docker"
 tap  "heroku/brew"
 brew "heroku/brew/heroku"
 
