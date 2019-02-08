@@ -187,7 +187,7 @@ brew "yara"
 # games
 %w{ nethack vitetris zork }.each { |pkg| brew pkg }
 
-# Work
-if ENV['WORK']
-  cask 'ngrok'
-end
+# CLI services
+brew 'asciinema'
+cask 'ngrok'
+
