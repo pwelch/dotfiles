@@ -2,8 +2,6 @@
 
 ## Setup
 
-Run this:
-
 ```sh
 git clone https://github.com/pwelch/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
