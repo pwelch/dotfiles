@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Installs base gems used often
 
