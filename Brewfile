@@ -51,6 +51,8 @@ brew "make" # gmake
 tap  "bazelbuild/tap"
 brew "bazelbuild/tap/bazel"
 
+brew 'yarn'
+
 # Use OpenJDK over Oracle Java
 tap "AdoptOpenJDK/openjdk"
 cask "adoptopenjdk11"
@@ -74,10 +76,17 @@ brew "pandoc"
 brew "pidof"
 brew "plantuml"
 brew "pwgen"
+brew "readline"
 brew "shellcheck"
 brew "stow"
 brew "tree"
 brew "unrar"
+
+# required for python
+# sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+# https://github.com/Homebrew/homebrew-core/issues/29176
+brew "xz"
+brew "zlib"
 
 # network
 brew "ssh-copy-id"
