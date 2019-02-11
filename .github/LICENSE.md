@@ -1,6 +1,6 @@
 The MIT License
 
-Copyright (c) Paul Welch, paul@pwelch.net
+Copyright (c) Paul Welch, git@pwelch.net
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
