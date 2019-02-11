@@ -1,3 +1,5 @@
 bundler
-rake
 pry
+rails
+rake
+sinatra
