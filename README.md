@@ -10,9 +10,6 @@ cd ~/.dotfiles
 
 brew bundle
 
-# Install GNU Stow
-brew install stow
-
 # Setup dotfiles. Use --no for no action
 stow git jrnl ruby tmux vim zsh --verbose
 
@@ -22,6 +19,7 @@ scripts/install
 
 This will symlink the appropriate files in `.dotfiles` to your home
 directory.
+
 Everything is configured and tweaked within `~/.dotfiles`.
 
 ## External Programs
