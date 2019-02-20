@@ -61,6 +61,7 @@ cask "adoptopenjdk11"
 brew "ack"
 brew "coreutils"
 brew "direnv"
+brew "envchain"
 brew "ffmpeg"
 brew "gdb"
 brew "gnu-sed"
@@ -81,6 +82,7 @@ brew "shellcheck"
 brew "stow"
 brew "tree"
 brew "unrar"
+brew "yamllint"
 
 # required for python
 # sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
@@ -176,6 +178,7 @@ cask "licecap"
 cask "mountain-duck"
 cask "plex-media-player"
 cask "postman"
+cask "rocket"
 cask "spectacle"
 cask "spotify"
 cask "transmission"
@@ -198,5 +201,6 @@ brew "yara"
 
 # CLI services
 brew 'asciinema'
+brew 'circleci'
 cask 'ngrok'
 
