@@ -96,6 +96,11 @@ chef-init () {
   eval "$(chef shell-init zsh)"
 }
 
+# xy for display
+xy() {
+  echo "$(tput cols)x$(tput lines)"
+}
+
 # From: https://github.com/holman/dotfiles/blob/master/functions/extract
 # credit: http://nparikh.org/notes/zshrc.txt
 # Usage: extract <file>
