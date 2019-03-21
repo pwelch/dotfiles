@@ -40,7 +40,6 @@ brew "crystal"
 brew "elixir"
 brew "go"
 brew "lua"
-cask "powershell"
 brew "protobuf"
 brew "r"
 brew "rebar"
@@ -52,6 +51,12 @@ tap  "bazelbuild/tap"
 brew "bazelbuild/tap/bazel"
 
 brew 'yarn'
+
+# shells
+brew "bash" # latest bash
+brew "fish"
+brew "zsh"  # default
+cask "powershell"
 
 # Use OpenJDK over Oracle Java
 tap "AdoptOpenJDK/openjdk"
@@ -106,12 +111,12 @@ brew "sqlite"
 brew "zeromq"
 
 # dev tools
-brew "jq"
+brew "fzf"
 brew "git"
 brew "git-lfs"
+brew "jq"
 brew "the_silver_searcher"
 brew "watch"
-brew "zsh"
 
 # CLI tools
 brew "calc"
@@ -136,12 +141,14 @@ brew "socat"
 brew "tig"
 brew "tmux"
 brew "todo-txt"
+brew "trash"
 brew "vim"
 brew "weechat"
 
 # devops tools
 brew "ansible"
 cask "chef/chef/chefdk"
+brew "rex"
 
 cask "docker"
 brew "kops"
@@ -180,6 +187,7 @@ cask "mountain-duck"
 cask "plex-media-player"
 cask "postman"
 cask "rocket"
+cask "sloth"
 cask "spectacle"
 cask "spotify"
 cask "transmission"
