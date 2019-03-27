@@ -20,6 +20,7 @@ mas "PomodoroApp", id: 705103149
 mas "Quiver", id: 866773894
 mas "Textual", id: 1262957439
 mas "Todoist", id: 585829637
+mas "Trello", id: 1278508951
 mas "WiFi Explorer", id: 494803304
 mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
