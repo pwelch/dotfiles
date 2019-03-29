@@ -193,6 +193,7 @@ cask "spectacle"
 cask "spotify"
 cask "transmission"
 cask "vlc"
+cask "yacreader"
 cask "zterm"
 
 # objective-see
