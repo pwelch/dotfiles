@@ -130,7 +130,6 @@ brew "ipcalc"
 brew "irssi"
 brew "jrnl"
 brew "lynx"
-brew "macvim"
 brew "midnight-commander"
 brew "mutt"
 brew "newsboat"
@@ -145,6 +144,12 @@ brew "todo-txt"
 brew "trash"
 brew "vim"
 brew "weechat"
+
+# dev tools
+brew "macvim"
+brew "vim"
+cask "sublime-text"
+cask "visual-studio-code"
 
 # devops tools
 brew "ansible"
@@ -170,6 +175,8 @@ cask "google-cloud-sdk"
 tap  "heroku/brew"
 brew "heroku/brew/heroku"
 
+cask "virtualbox"
+
 # misc
 brew "exercism"
 brew "youtube-dl"
@@ -178,13 +185,17 @@ brew "youtube-dl"
 cask "alfred"
 cask "balenaetcher"
 cask "boostnote"
+cask "cardhop"
+cask "chatology"
 cask "cryptomator"
 cask "cyberduck"
+cask "fantastical"
 cask "drawio"
 cask "gpg-suite"
 cask "iterm2"
 cask "licecap"
 cask "mountain-duck"
+cask "onedrive"
 cask "plex-media-player"
 cask "postman"
 cask "rocket"
@@ -192,6 +203,7 @@ cask "sloth"
 cask "spectacle"
 cask "spotify"
 cask "transmission"
+cask "viscosity"
 cask "vlc"
 cask "yacreader"
 cask "zterm"
@@ -207,6 +219,15 @@ brew "chkrootkit"
 brew "nmap"
 brew "yara"
 
+# chat
+cask "adium"
+cask "discord"
+cask "signal"
+cask "slack"
+cask "textual"
+cask "whatsapp"
+cask "wickr"
+
 # games
 %w{ nethack vitetris zork }.each { |pkg| brew pkg }
 
@@ -215,3 +236,6 @@ brew 'asciinema'
 brew 'circleci'
 cask 'ngrok'
 
+# Not managed by Homewbrew
+# Audacity
+# Boostnote
