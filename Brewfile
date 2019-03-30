@@ -148,6 +148,7 @@ brew "weechat"
 # dev tools
 brew "macvim"
 brew "vim"
+cask "atom"
 cask "sublime-text"
 cask "visual-studio-code"
 
@@ -189,7 +190,7 @@ cask "cardhop"
 cask "chatology"
 cask "cryptomator"
 cask "cyberduck"
-cask "fantastical"
+# cask "fantastical"
 cask "drawio"
 cask "gpg-suite"
 cask "iterm2"
@@ -226,7 +227,6 @@ cask "signal"
 cask "slack"
 cask "textual"
 cask "whatsapp"
-cask "wickr"
 
 # games
 %w{ nethack vitetris zork }.each { |pkg| brew pkg }
