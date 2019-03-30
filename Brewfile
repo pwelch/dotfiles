@@ -20,6 +20,7 @@ mas "PomodoroApp", id: 705103149
 mas "Quiver", id: 866773894
 mas "Textual", id: 1262957439
 mas "Todoist", id: 585829637
+mas "Trello", id: 1278508951
 mas "WiFi Explorer", id: 494803304
 mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
@@ -40,7 +41,6 @@ brew "crystal"
 brew "elixir"
 brew "go"
 brew "lua"
-cask "powershell"
 brew "protobuf"
 brew "r"
 brew "rebar"
@@ -52,6 +52,12 @@ tap  "bazelbuild/tap"
 brew "bazelbuild/tap/bazel"
 
 brew 'yarn'
+
+# shells
+brew "bash" # latest bash
+brew "fish"
+brew "zsh"  # default
+cask "powershell"
 
 # Use OpenJDK over Oracle Java
 tap "AdoptOpenJDK/openjdk"
@@ -106,12 +112,12 @@ brew "sqlite"
 brew "zeromq"
 
 # dev tools
-brew "jq"
+brew "fzf"
 brew "git"
 brew "git-lfs"
+brew "jq"
 brew "the_silver_searcher"
 brew "watch"
-brew "zsh"
 
 # CLI tools
 brew "calc"
@@ -135,6 +141,8 @@ brew "socat"
 brew "tig"
 brew "tmux"
 brew "todo-txt"
+brew "trash"
+brew "vim"
 brew "weechat"
 
 # dev tools
@@ -146,6 +154,7 @@ cask "visual-studio-code"
 # devops tools
 brew "ansible"
 cask "chef/chef/chefdk"
+brew "rex"
 
 cask "docker"
 brew "kops"
@@ -190,11 +199,13 @@ cask "onedrive"
 cask "plex-media-player"
 cask "postman"
 cask "rocket"
+cask "sloth"
 cask "spectacle"
 cask "spotify"
 cask "transmission"
 cask "viscosity"
 cask "vlc"
+cask "yacreader"
 cask "zterm"
 
 # objective-see

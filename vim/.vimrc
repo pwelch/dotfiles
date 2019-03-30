@@ -17,7 +17,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'git@github.com:ck3g/vim-change-hash-syntax.git' " :ChangeHashSyntax
 Plugin 'godlygeek/tabular'                              " :Tabularize
 
@@ -46,30 +47,38 @@ filetype plugin indent on " required (ignore plugin indent changes)
 " Put your non-Plugin stuff after this line
 
 "" Vim Preferences
-syntax enable     " Enable syntax highlighting
-set number        " Enable line numbers
-set spell         " Turn on spell check
-set paste         " Default to paste insert
-set nolist        " Turn off `set list` by default
-set showcmd       " show command in bottom bar
-set cursorline    " highlight current line
-set wildmenu      " visual autocomplete for command menu
-set smarttab      " make "tab" insert indents instead of tabs at the beginning of a line
-set expandtab     " always uses spaces instead of tab characters
-set shiftwidth=2  " size of an "indent"
-set tabstop=2     " number of visual spaces per TAB
-set softtabstop=2 " number of spaces in tab when editing
-set autoindent    " Automatically indent
-set copyindent    " Copy the previous line's indenting
-set showmatch     " highlight matching [{()}]
-set nohlsearch    " Highlight search terms
-set incsearch     " Show search matches incrementally
-set ignorecase    " Ignore case when searching
-set visualbell    " Use visual bell (no beeping)
+syntax enable       " Enable syntax highlighting
+set autoindent      " Automatically indent
+set autoread        " reload files when changed on disk, i.e. via `git checkout`
+set backspace=2     " Fix broken backspace in some setups
+set copyindent      " Copy the previous line's indenting
+set cursorline      " highlight current line
+set encoding=utf-8  " encoding to UTF-8
+set expandtab       " always uses spaces instead of tab characters
+set ignorecase      " Ignore case when searching
+set incsearch       " Show search matches incrementally
+set modeline        " use vim modelines
+set nohlsearch      " Highlight search terms
+set nolist          " Turn off `set list` by default
+set number          " Enable line numbers
+set paste           " Default to paste insert
+set shiftwidth=2    " size of an "indent"
+set showcmd         " show command in bottom bar
+set showmatch       " highlight matching [{()}]
+set smarttab        " make "tab" insert indents instead of tabs at the beginning of a line
+set softtabstop=2   " number of spaces in tab when editing
+set spell           " Turn on spell check
+set tabstop=2       " number of visual spaces per TAB
+set visualbell      " Use visual bell (no beeping)
+set wildmenu        " visual autocomplete for command menu
+
+" Enable basic mouse behavior such as resizing buffers.
+set mouse=a
 
 "" Custom Maps
 " Ensure default leader is set to \
 let mapleader = "\\"
+
 " Reset highlighted search with enter
 nnoremap <CR> :let @/=""<CR><CR>
 " Shortcut to list buffers
@@ -127,5 +136,41 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Use Ag with ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 "" Notes
 " Word Count - `g` then `CTRL + g`
+
+" :Bashrockets   {:foo => 'bar', :boston => 'rocks'}  ==>   {foo: 'bar', boston: 'rocks'}
+" :Hashrockets   {foo: 'bar', boston: 'rocks'}        ==>   {:foo => 'bar', :boston => 'rocks'}
+"
+" You can select a range before entering these commands. They will apply the
+" conversion to all the text in the range.
+"
+" You can also type the first few characters of either command and try to let
+" Vim tab-autocomplete it.
+"
+" Daniel Choi http://github.com/danchoi
+function! s:hashrockets() range
+  let lnum = a:firstline
+  while lnum <= a:lastline
+    let newline = substitute(getline(lnum), '\(\w\+\):', ':\1 =>', 'g')
+    call setline(lnum, newline)
+    let lnum += 1
+  endwhile
+endfunction
+
+function! s:bashrockets() range
+  let lnum = a:firstline
+  while lnum <= a:lastline
+    let newline = substitute(getline(lnum), ':\(\w\+\)\s*=>', '\1:', 'g')
+    call setline(lnum, newline)
+    let lnum += 1
+  endwhile
+endfunction
+command! -range Bashrockets :<line1>,<line2>call s:bashrockets() | update
+command! -range Hashrockets :<line1>,<line2>call s:hashrockets() | update
+
