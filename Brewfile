@@ -160,6 +160,8 @@ brew "rex"
 cask "docker"
 brew "kops"
 brew "kubernetes-cli"
+tap  "buildpack/tap"
+brew "pack"
 
 brew "consul"
 brew "nomad"
