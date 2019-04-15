@@ -53,6 +53,12 @@ brew "bazelbuild/tap/bazel"
 
 brew 'yarn'
 
+brew "git"
+brew "git-lfs"
+brew "mercurial"
+
+cask "sfdx"
+
 # shells
 brew "bash" # latest bash
 brew "fish"
@@ -113,8 +119,6 @@ brew "zeromq"
 
 # dev tools
 brew "fzf"
-brew "git"
-brew "git-lfs"
 brew "jq"
 brew "the_silver_searcher"
 brew "watch"
