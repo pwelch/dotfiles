@@ -158,13 +158,13 @@ weather() {
   curl -s http://wttr.in/$1
 }
 
-# added by travis gem
-[ -f /Users/pwelch/.travis/travis.sh ] && source /Users/pwelch/.travis/travis.sh
-
 # asdf
 #. $HOME/.asdf/asdf.sh
 #. $HOME/.asdf/completions/asdf.bash
 source /usr/local/opt/asdf/asdf.sh # asdf installed via homebrew
+
+# activate gel gem manager
+# eval "$(gel shell-setup)"
 
 # ChefDK
 export PATH="/opt/chefdk/bin:$PATH"
