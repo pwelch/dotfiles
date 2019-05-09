@@ -161,8 +161,8 @@ cask "visual-studio-code"
 
 # devops tools
 brew "ansible"
-cask "chef/chef/chefdk"
 brew "rex"
+# cask "chef/chef/chefdk"
 
 cask "docker"
 brew "kops"
