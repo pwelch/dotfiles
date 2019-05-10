@@ -118,11 +118,13 @@ brew "sqlite"
 brew "zeromq"
 
 # dev tools
+brew "fossil"
 brew "fzf"
-brew "goaccess"
 brew "git"
 brew "git-lfs"
+brew "goaccess"
 brew "jq"
+brew "mercurial"
 brew "the_silver_searcher"
 brew "watch"
 
