@@ -35,6 +35,7 @@ mas "uBlock", id: 1385985095
 
 # packaage manager
 brew "asdf"
+brew "ruby-build"
 # asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 # asdf plugin-add python https://github.com/danhper/asdf-python.git
 # asdf plugin-add consul|nomad|packer|serf|terraform|vault https://github.com/Banno/asdf-hashicorp.git
@@ -129,6 +130,7 @@ brew "watch"
 # CLI tools
 brew "calc"
 brew "cmatrix"
+brew "cointop"
 brew "cowsay"
 brew "ddgr"
 brew "gnuplot"
@@ -150,6 +152,7 @@ brew "tmux"
 brew "todo-txt"
 brew "trash"
 brew "vim"
+brew "darksky-weather"
 brew "weechat"
 
 # dev tools
