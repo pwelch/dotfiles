@@ -37,7 +37,7 @@
     pager  = less -r
     excludesfile = ~/.gitignore
 [commit]
-		verbose = true
+    verbose = true
 [apply]
     whitespace = nowarn
 [merge]
