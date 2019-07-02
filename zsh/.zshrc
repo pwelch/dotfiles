@@ -4,8 +4,7 @@ export ZSH=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/code
 
-# all of our zsh files
-typeset -U config_files
+# all of our zsh files typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 
 # load the path files
@@ -50,11 +49,13 @@ plugins=(
   vi-mode
 )
 
-source $ZSH/oh-my-zsh.sh
-
 # Set History
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1500
+SAVEHIST=1500
+HIST_STAMPS="%Y-%m-%d %T"
+# HIST_STAMPS="yyyy-mm-dd"
+
+source $ZSH/oh-my-zsh.sh
 
 ## Customize PATH
 # Default Path
