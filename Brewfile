@@ -22,6 +22,7 @@ mas "Monodraw", id: 920404675
 mas "Paprika", id: 1303222628
 mas "PomodoroApp", id: 705103149
 mas "Quiver", id: 866773894
+mas "Tadam", id: 531349534
 mas "Textual", id: 1262957439
 mas "Todoist", id: 585829637
 mas "Trello", id: 1278508951
@@ -59,6 +60,12 @@ tap  "bazelbuild/tap"
 brew "bazelbuild/tap/bazel"
 
 brew 'yarn'
+
+brew "git"
+brew "git-lfs"
+brew "mercurial"
+
+cask "sfdx"
 
 # shells
 brew "bash" # latest bash
@@ -174,6 +181,8 @@ brew "rex"
 cask "docker"
 brew "kops"
 brew "kubernetes-cli"
+tap  "buildpack/tap"
+brew "pack"
 
 brew "consul"
 brew "nomad"
