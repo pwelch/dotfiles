@@ -114,6 +114,8 @@ brew "ssh-copy-id"
 brew "wget"
 brew "wrk"
 
+cask "zerotier-one"
+
 # services
 brew "sqlite"
 brew "zeromq"
