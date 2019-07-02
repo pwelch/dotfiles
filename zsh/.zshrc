@@ -4,8 +4,7 @@ export ZSH=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/code
 
-# all of our zsh files
-typeset -U config_files
+# all of our zsh files typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 
 # load the path files
@@ -50,11 +49,13 @@ plugins=(
   vi-mode
 )
 
-source $ZSH/oh-my-zsh.sh
-
 # Set History
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1500
+SAVEHIST=1500
+HIST_STAMPS="%Y-%m-%d %T"
+# HIST_STAMPS="yyyy-mm-dd"
+
+source $ZSH/oh-my-zsh.sh
 
 ## Customize PATH
 # Default Path
@@ -158,13 +159,13 @@ weather() {
   curl -s http://wttr.in/$1
 }
 
-# added by travis gem
-[ -f /Users/pwelch/.travis/travis.sh ] && source /Users/pwelch/.travis/travis.sh
-
 # asdf
 #. $HOME/.asdf/asdf.sh
 #. $HOME/.asdf/completions/asdf.bash
 source /usr/local/opt/asdf/asdf.sh # asdf installed via homebrew
+
+# activate gel gem manager
+# eval "$(gel shell-setup)"
 
 # ChefDK
 export PATH="/opt/chefdk/bin:$PATH"

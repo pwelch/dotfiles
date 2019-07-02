@@ -11,13 +11,18 @@ tap "homebrew/cask"
 
 # App Store
 mas "Amphetamine", id: 937984704
-mas "Calc", id: 635758264
+mas "Bear", id: 1091189122
+mas "Calca", id: 635758264
 mas "ClamXav", id: 430207028
+mas "Draft", id: 1435957248
+mas "Forecastbar", id: 982710545
 mas "Mindnode", id: 1289197285
 mas "Monit", id: 1014850245
 mas "Monodraw", id: 920404675
+mas "Paprika", id: 1303222628
 mas "PomodoroApp", id: 705103149
 mas "Quiver", id: 866773894
+mas "Tadam", id: 531349534
 mas "Textual", id: 1262957439
 mas "Todoist", id: 585829637
 mas "Trello", id: 1278508951
@@ -26,9 +31,12 @@ mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
 mas "iHex", id: 909566003
 mas "pwSafe", id: 520993579
+mas "pwSafe", id: 520993579
+mas "uBlock", id: 1385985095
 
 # packaage manager
 brew "asdf"
+brew "ruby-build"
 # asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 # asdf plugin-add python https://github.com/danhper/asdf-python.git
 # asdf plugin-add consul|nomad|packer|serf|terraform|vault https://github.com/Banno/asdf-hashicorp.git
@@ -113,19 +121,27 @@ brew "ssh-copy-id"
 brew "wget"
 brew "wrk"
 
+cask "zerotier-one"
+
 # services
 brew "sqlite"
 brew "zeromq"
 
 # dev tools
+brew "fossil"
 brew "fzf"
+brew "git"
+brew "git-lfs"
+brew "goaccess"
 brew "jq"
+brew "mercurial"
 brew "the_silver_searcher"
 brew "watch"
 
 # CLI tools
 brew "calc"
 brew "cmatrix"
+brew "cointop"
 brew "cowsay"
 brew "ddgr"
 brew "gnuplot"
@@ -147,6 +163,7 @@ brew "tmux"
 brew "todo-txt"
 brew "trash"
 brew "vim"
+brew "darksky-weather"
 brew "weechat"
 
 # dev tools
@@ -158,8 +175,8 @@ cask "visual-studio-code"
 
 # devops tools
 brew "ansible"
-cask "chef/chef/chefdk"
 brew "rex"
+# cask "chef/chef/chefdk"
 
 cask "docker"
 brew "kops"
@@ -197,8 +214,10 @@ cask "chatology"
 cask "cryptomator"
 cask "cyberduck"
 # cask "fantastical"
+cask "disk-inventory-x"
 cask "drawio"
 cask "gpg-suite"
+cask "handbrake"
 cask "iterm2"
 cask "licecap"
 cask "mountain-duck"
