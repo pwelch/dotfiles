@@ -20,6 +20,7 @@ mas "Mindnode", id: 1289197285
 mas "Monit", id: 1014850245
 mas "Monodraw", id: 920404675
 mas "Paprika", id: 1303222628
+mas "PiPer", id: 1421915518
 mas "PomodoroApp", id: 705103149
 mas "Quiver", id: 866773894
 mas "Tadam", id: 531349534
@@ -217,6 +218,7 @@ cask "chatology"
 cask "cryptomator"
 cask "cyberduck"
 # cask "fantastical"
+cask "deckset"
 cask "disk-inventory-x"
 cask "drawio"
 cask "gpg-suite"
