@@ -14,15 +14,17 @@ mas "Amphetamine", id: 937984704
 mas "Bear", id: 1091189122
 mas "Calca", id: 635758264
 mas "ClamXav", id: 430207028
-mas "Draft", id: 1435957248
+mas "Drafts", id: 1435957248
 mas "Forecastbar", id: 982710545
 mas "Mindnode", id: 1289197285
 mas "Monit", id: 1014850245
 mas "Monodraw", id: 920404675
 mas "Paprika", id: 1303222628
+mas "PiPer", id: 1421915518
 mas "PomodoroApp", id: 705103149
 mas "Quiver", id: 866773894
 mas "Tadam", id: 531349534
+mas "TableFlip", id: 1462643128
 mas "Textual", id: 1262957439
 mas "Todoist", id: 585829637
 mas "Trello", id: 1278508951
@@ -58,6 +60,7 @@ brew "rust"
 brew "make" # gmake
 tap  "bazelbuild/tap"
 brew "bazelbuild/tap/bazel"
+brew "ninja"
 
 brew 'yarn'
 
@@ -121,6 +124,7 @@ brew "ssh-copy-id"
 brew "wget"
 brew "wrk"
 
+# cask "ipfs"
 cask "zerotier-one"
 
 # services
@@ -214,6 +218,7 @@ cask "chatology"
 cask "cryptomator"
 cask "cyberduck"
 # cask "fantastical"
+cask "deckset"
 cask "disk-inventory-x"
 cask "drawio"
 cask "gpg-suite"
