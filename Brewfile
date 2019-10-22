@@ -29,7 +29,7 @@ mas "Textual", id: 1262957439
 mas "Todoist", id: 585829637
 mas "Trello", id: 1278508951
 mas "WiFi Explorer", id: 494803304
-mas "Wunderlist", id: 410628904
+# mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
 mas "iHex", id: 909566003
 mas "pwSafe", id: 520993579
