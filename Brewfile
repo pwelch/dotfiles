@@ -33,7 +33,6 @@ mas "WiFi Explorer", id: 494803304
 mas "Xcode", id: 497799835
 mas "iHex", id: 909566003
 mas "pwSafe", id: 520993579
-mas "pwSafe", id: 520993579
 mas "uBlock", id: 1385985095
 
 # packaage manager
@@ -64,6 +63,7 @@ brew "ninja"
 
 brew 'yarn'
 
+brew "fossil"
 brew "git"
 brew "git-lfs"
 brew "mercurial"
@@ -132,13 +132,9 @@ brew "sqlite"
 brew "zeromq"
 
 # dev tools
-brew "fossil"
 brew "fzf"
-brew "git"
-brew "git-lfs"
 brew "goaccess"
 brew "jq"
-brew "mercurial"
 brew "the_silver_searcher"
 brew "watch"
 
@@ -166,7 +162,6 @@ brew "tig"
 brew "tmux"
 brew "todo-txt"
 brew "trash"
-brew "vim"
 brew "darksky-weather"
 brew "weechat"
 
