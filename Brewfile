@@ -165,7 +165,7 @@ brew "trash"
 brew "darksky-weather"
 brew "weechat"
 
-# dev tools
+# editors
 brew "macvim"
 brew "vim"
 cask "atom"
