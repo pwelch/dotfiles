@@ -1,10 +1,8 @@
 # Brewfile: https://github.com/Homebrew/homebrew-bundle
 
-#
 # xcode-select --install
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # brew bundle --verbose
-#
 
 cask_args appdir: "/Applications"
 tap "homebrew/cask"
