@@ -73,6 +73,7 @@ brew "bash" # latest bash
 brew "fish"
 brew "zsh"  # default
 cask "powershell"
+brew "starship"
 
 # Use OpenJDK over Oracle Java
 tap "AdoptOpenJDK/openjdk"
