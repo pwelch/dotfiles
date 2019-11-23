@@ -26,12 +26,9 @@ mas "Quiver", id: 866773894
 mas "Tadam", id: 531349534
 mas "TableFlip", id: 1462643128
 mas "Textual", id: 1262957439
-mas "Todoist", id: 585829637
 mas "Trello", id: 1278508951
 mas "WiFi Explorer", id: 494803304
-# mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
-mas "iHex", id: 909566003
 mas "pwSafe", id: 520993579
 mas "pwSafe", id: 520993579
 mas "uBlock", id: 1385985095
@@ -212,6 +209,7 @@ brew "youtube-dl"
 # casks
 cask "alfred"
 cask "balenaetcher"
+cask "binary-ninja"
 cask "boostnote"
 cask "cardhop"
 cask "chatology"
@@ -233,13 +231,16 @@ cask "rocket"
 cask "sloth"
 cask "spectacle"
 cask "spotify"
-cask "tableplus"
 cask "transmission"
 cask "turtl"
 cask "viscosity"
 cask "vlc"
 cask "yacreader"
 cask "zterm"
+
+# db tools
+cask "tableplus"
+cask "dbeaver-community"
 
 # objective-see
 cask "blockblock"
