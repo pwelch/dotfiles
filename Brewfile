@@ -229,7 +229,6 @@ cask "postman"
 cask "rocket"
 cask "sloth"
 cask "spectacle"
-cask "spotify"
 cask "tableplus"
 cask "transmission"
 cask "turtl"
@@ -237,6 +236,11 @@ cask "viscosity"
 cask "vlc"
 cask "yacreader"
 cask "zterm"
+
+# music
+cask "spotify"
+cask "jqbx"
+cask "sonic-pi"
 
 # objective-see
 cask "blockblock"
