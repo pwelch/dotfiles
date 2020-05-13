@@ -84,6 +84,7 @@ brew "direnv"
 brew "envchain"
 brew "ffmpeg"
 brew "gdb"
+brew "gh"
 brew "gnu-sed"
 brew "gnu-tar"  # required for fpm
 brew "gpg"
