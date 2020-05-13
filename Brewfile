@@ -70,6 +70,7 @@ brew "bash" # latest bash
 brew "fish"
 brew "zsh"  # default
 cask "powershell"
+brew "starship"
 
 # Use OpenJDK over Oracle Java
 tap "AdoptOpenJDK/openjdk"
@@ -195,6 +196,9 @@ cask "google-cloud-sdk"
 tap  "heroku/brew"
 brew "heroku/brew/heroku"
 
+tap "TylerBrock/saw"
+brew "saw"
+
 cask "virtualbox"
 
 # misc
@@ -208,6 +212,7 @@ cask "binary-ninja"
 cask "boostnote"
 cask "cardhop"
 cask "chatology"
+cask "cleanshot"
 cask "cryptomator"
 cask "cyberduck"
 # cask "fantastical"
@@ -225,6 +230,7 @@ cask "postman"
 cask "rectangle"
 cask "rocket"
 cask "sloth"
+cask "tableplus"
 cask "spotify"
 cask "transmission"
 cask "turtl"
@@ -232,6 +238,11 @@ cask "viscosity"
 cask "vlc"
 cask "yacreader"
 cask "zterm"
+
+# music
+cask "spotify"
+cask "jqbx"
+cask "sonic-pi"
 
 # db tools
 cask "tableplus"
