@@ -1,2 +1,7 @@
 # ~/.config/starship.toml
 # https://starship.rs/config/
+
+[[battery.display]]
+threshold = 25
+style = "bold red"
+
