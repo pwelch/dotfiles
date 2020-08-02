@@ -23,7 +23,6 @@ mas "Quiver", id: 866773894
 mas "Tadam", id: 531349534
 mas "TableFlip", id: 1462643128
 mas "Textual", id: 1262957439
-mas "Trello", id: 1278508951
 mas "WiFi Explorer", id: 494803304
 mas "Xcode", id: 497799835
 mas "pwSafe", id: 520993579
@@ -244,7 +243,7 @@ cask "sonic-pi"
 
 # db tools
 cask "tableplus"
-cask "dbeaver-community"
+# cask "dbeaver-community"
 
 # objective-see
 cask "blockblock"
