@@ -262,6 +262,7 @@ brew "yara"
 # chat
 cask "adium"
 cask "discord"
+cask "jitsi-meet"
 cask "signal"
 cask "slack"
 cask "textual"
