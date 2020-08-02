@@ -11,7 +11,6 @@ tap "homebrew/cask"
 mas "Amphetamine", id: 937984704
 mas "Bear", id: 1091189122
 mas "Calca", id: 635758264
-mas "ClamXav", id: 430207028
 mas "Drafts", id: 1435957248
 mas "Forecastbar", id: 982710545
 mas "Mindnode", id: 1289197285
@@ -230,7 +229,6 @@ cask "postman"
 cask "rectangle"
 cask "rocket"
 cask "sloth"
-cask "tableplus"
 cask "spotify"
 cask "transmission"
 cask "turtl"
@@ -258,6 +256,7 @@ cask "taskexplorer"
 brew "chkrootkit"
 brew "nmap"
 brew "yara"
+cask "bluetility"
 
 # chat
 cask "adium"
