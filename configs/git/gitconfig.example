@@ -57,3 +57,5 @@
    process = git-lfs filter-process
 [commit]
    verbose = true
+[pull]
+	ff = only
