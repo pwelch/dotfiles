@@ -235,7 +235,9 @@ cask "turtl"
 cask "viscosity"
 cask "vlc"
 cask "yacreader"
-cask "zterm"
+
+# Unsupported in 10.15
+# cask "zterm"
 
 # music
 cask "spotify"
