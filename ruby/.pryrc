@@ -1,3 +1,7 @@
+# .pryrc
+Pry.config.history_save = true
+Pry.config.history_file = "~/.pry_history"
+
 begin
   require 'hirb'
 rescue LoadError
