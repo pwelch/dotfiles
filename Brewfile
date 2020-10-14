@@ -24,9 +24,9 @@ mas "Tadam", id: 531349534
 mas "TableFlip", id: 1462643128
 mas "Textual", id: 1262957439
 mas "WiFi Explorer", id: 494803304
-mas "Xcode", id: 497799835
 mas "pwSafe", id: 520993579
 mas "uBlock", id: 1385985095
+# mas "Xcode", id: 497799835
 
 # packaage manager
 brew "asdf"
@@ -171,18 +171,19 @@ cask "visual-studio-code"
 
 # devops tools
 brew "ansible"
-brew "rex"
+# brew "rex"
 # cask "chef/chef/chefdk"
 
 cask "docker"
 brew "kops"
 brew "kubernetes-cli"
-tap  "buildpack/tap"
-brew "pack"
+brew "buildpacks/tap/pack"
 
+brew "hashicorp/tap/boundary"
 brew "hashicorp/tap/consul"
 brew "hashicorp/tap/nomad"
 brew "hashicorp/tap/packer"
+# brew "hashicorp/tap/REDACTED"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
 cask "vagrant"
@@ -219,7 +220,6 @@ cask "deckset"
 cask "disk-inventory-x"
 cask "drawio"
 cask "gpg-suite"
-cask "handbrake"
 cask "iterm2"
 cask "licecap"
 cask "mountain-duck"
@@ -267,14 +267,13 @@ cask "jitsi-meet"
 cask "signal"
 cask "slack"
 cask "textual"
-cask "whatsapp"
 
 # games
 %w{ nethack vitetris zork }.each { |pkg| brew pkg }
 
 # CLI services
 brew 'asciinema'
-brew 'circleci'
+brew 'gh'
 cask 'ngrok'
 
 # Not managed by Homewbrew
