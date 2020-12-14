@@ -47,19 +47,15 @@ brew "protobuf"
 brew "r"
 brew "rebar"
 cask "rstudio"
-brew "rust"
 
 brew "make" # gmake
 tap  "bazelbuild/tap"
 brew "bazelbuild/tap/bazel"
 brew "ninja"
-
 brew 'yarn'
 
-brew "fossil"
 brew "git"
 brew "git-lfs"
-brew "mercurial"
 
 cask "sfdx"
 
@@ -127,10 +123,12 @@ brew "sqlite"
 brew "zeromq"
 
 # dev tools
+brew "fd"
 brew "fzf"
 brew "goaccess"
 brew "jq"
 brew "the_silver_searcher"
+brew "tldr"
 brew "watch"
 
 # CLI tools
@@ -165,13 +163,11 @@ brew "weechat"
 # editors
 brew "macvim"
 brew "vim"
-cask "atom"
 cask "sublime-text"
 cask "visual-studio-code"
 
 # devops tools
 brew "ansible"
-# brew "rex"
 # cask "chef/chef/chefdk"
 
 cask "docker"
@@ -183,7 +179,7 @@ brew "hashicorp/tap/boundary"
 brew "hashicorp/tap/consul"
 brew "hashicorp/tap/nomad"
 brew "hashicorp/tap/packer"
-# brew "hashicorp/tap/REDACTED"
+brew "hashicorp/tap/waypoint"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
 cask "vagrant"
@@ -221,10 +217,8 @@ cask "disk-inventory-x"
 cask "drawio"
 cask "gpg-suite"
 cask "iterm2"
-cask "licecap"
 cask "mountain-duck"
 cask "netnewswire"
-cask "onedrive"
 cask "plex-media-player"
 cask "postman"
 cask "rectangle"
@@ -262,7 +256,6 @@ brew "yara"
 cask "bluetility"
 
 # chat
-cask "adium"
 cask "discord"
 cask "jitsi-meet"
 cask "signal"
@@ -279,4 +272,3 @@ cask 'ngrok'
 
 # Not managed by Homewbrew
 # Audacity
-# Boostnote
