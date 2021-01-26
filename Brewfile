@@ -37,7 +37,6 @@ brew "ruby-build"
 # asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 # languages
-cask "anaconda"
 brew "clisp"
 brew "crystal"
 brew "elixir"
@@ -46,6 +45,9 @@ brew "lua"
 brew "protobuf"
 brew "r"
 brew "rebar"
+
+cask "anaconda"
+brew "jupyterlab"
 cask "rstudio"
 
 brew "make" # gmake
