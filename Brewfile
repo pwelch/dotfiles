@@ -40,19 +40,21 @@ brew "ruby-build"
 cask "anaconda"
 brew "clisp"
 brew "crystal"
+brew "deno"
 brew "elixir"
 brew "go"
 brew "lua"
 brew "protobuf"
 brew "r"
 brew "rebar"
+brew "rust"
 cask "rstudio"
 
 brew "make" # gmake
 tap  "bazelbuild/tap"
 brew "bazelbuild/tap/bazel"
 brew "ninja"
-brew 'yarn'
+brew "yarn"
 
 brew "git"
 brew "git-lfs"
