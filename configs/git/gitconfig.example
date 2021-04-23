@@ -58,4 +58,6 @@
 [commit]
    verbose = true
 [pull]
-	ff = only
+   ff = only
+[init]
+   defaultBranch = main
