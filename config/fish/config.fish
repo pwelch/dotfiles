@@ -1,8 +1,6 @@
 # ~/.config/fish/config.fish
 
-set --export SHELL /usr/bin/fish
 set --export EDITOR "vim"
-set -e fish_greeting
 
 # enable vi-mode bindings
 fish_vi_key_bindings
@@ -24,3 +22,6 @@ alias hist='history'
 
 # Add to PATH
 fish_add_path ~/bin
+
+# Setup asdf version manager installed via Homebrew
+source /opt/homebrew/opt/asdf/asdf.fish
