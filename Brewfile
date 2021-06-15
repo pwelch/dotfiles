@@ -12,9 +12,7 @@ mas "Amphetamine", id: 937984704
 mas "Bear", id: 1091189122
 mas "Calca", id: 635758264
 mas "Drafts", id: 1435957248
-mas "Forecastbar", id: 982710545
 mas "Mindnode", id: 1289197285
-mas "Monit", id: 1014850245
 mas "Monodraw", id: 920404675
 mas "Paprika", id: 1303222628
 mas "PiPer", id: 1421915518
@@ -26,9 +24,10 @@ mas "Textual", id: 1262957439
 mas "WiFi Explorer", id: 494803304
 mas "pwSafe", id: 520993579
 mas "uBlock", id: 1385985095
+# mas "Monit", id: 1014850245
 # mas "Xcode", id: 497799835
 
-# packaage manager
+# package manager
 brew "asdf"
 brew "ruby-build"
 # asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
@@ -57,7 +56,7 @@ brew 'yarn'
 brew "git"
 brew "git-lfs"
 
-cask "sfdx"
+# cask "sfdx"
 
 # shells
 brew "bash" # latest bash
@@ -116,7 +115,6 @@ brew "wget"
 brew "wrk"
 
 # cask "ipfs"
-cask "zerotier-one"
 
 # services
 brew "sqlite"
@@ -142,7 +140,6 @@ brew "gnuplot"
 brew "htop-osx"
 brew "jesseduffield/horcrux/horcrux"
 brew "ipcalc"
-brew "irssi"
 brew "jrnl"
 brew "lynx"
 brew "midnight-commander"
@@ -157,11 +154,9 @@ brew "tig"
 brew "tmux"
 brew "todo-txt"
 brew "trash"
-brew "darksky-weather"
-brew "weechat"
 
 # editors
-brew "macvim"
+# brew "macvim"
 brew "vim"
 cask "sublime-text"
 cask "visual-studio-code"
@@ -182,7 +177,7 @@ brew "hashicorp/tap/packer"
 brew "hashicorp/tap/waypoint"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
-cask "vagrant"
+# cask "vagrant"
 
 brew "awscli"
 brew "azure-cli"
@@ -195,7 +190,7 @@ brew "heroku/brew/heroku"
 tap "TylerBrock/saw"
 brew "saw"
 
-cask "virtualbox"
+# cask "virtualbox"
 
 # misc
 brew "exercism"
@@ -205,13 +200,11 @@ brew "youtube-dl"
 cask "alfred"
 cask "balenaetcher"
 cask "binary-ninja"
-cask "boostnote"
 cask "cardhop"
 cask "chatology"
 cask "cleanshot"
 cask "cryptomator"
 cask "cyberduck"
-# cask "fantastical"
 cask "deckset"
 cask "disk-inventory-x"
 cask "drawio"
@@ -256,6 +249,8 @@ brew "yara"
 cask "bluetility"
 
 # chat
+brew "irssi"
+brew "weechat"
 cask "discord"
 cask "jitsi-meet"
 cask "signal"
