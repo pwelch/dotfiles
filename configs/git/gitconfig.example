@@ -1,6 +1,6 @@
 [user]
     name  = pwelch
-    email = git@pwelch.net
+    email = git@welch.pw
 [credential]
     helper = osxkeychain
 [alias]
@@ -27,6 +27,9 @@
     email-domains = !git log --format="%aE" | awk -F'@' '{print $2}'
     unique-email-domains = !git email-domains | sort -u
     ranked-email-domains = !git email-domains | sort | uniq -c | sort -n
+
+     # git grep
+     g = grep --break --heading --line-number
 [color]
     ui = true
     diff = auto
@@ -55,9 +58,9 @@
    smudge = git-lfs smudge %f
    required = true
    process = git-lfs filter-process
-[commit]
-   verbose = true
 [pull]
    ff = only
 [init]
    defaultBranch = main
+[grep]
+   lineNumber = true
