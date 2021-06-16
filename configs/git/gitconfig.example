@@ -61,3 +61,5 @@
    ff = only
 [init]
    defaultBranch = main
+[grep]
+   lineNumber = true
