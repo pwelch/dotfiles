@@ -32,7 +32,6 @@ brew "asdf"
 brew "ruby-build"
 # asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 # asdf plugin-add python https://github.com/danhper/asdf-python.git
-# asdf plugin-add consul|nomad|packer|serf|terraform|vault https://github.com/Banno/asdf-hashicorp.git
 # asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 # languages
@@ -48,15 +47,11 @@ brew "rebar"
 cask "rstudio"
 
 brew "make" # gmake
-tap  "bazelbuild/tap"
-brew "bazelbuild/tap/bazel"
 brew "ninja"
 brew 'yarn'
 
 brew "git"
 brew "git-lfs"
-
-# cask "sfdx"
 
 # shells
 brew "bash" # latest bash
@@ -81,7 +76,6 @@ brew "gnu-sed"
 brew "gnu-tar"  # required for fpm
 brew "gpg"
 brew "graphviz"
-brew "hub"
 brew "hugo"
 brew "imagemagick"
 brew "mas"
@@ -105,7 +99,6 @@ brew "zlib"
 
 # network
 brew "curl"
-brew "httpie"
 brew "iftop"
 brew "iperf"
 brew "mtr"
@@ -120,14 +113,20 @@ brew "wrk"
 brew "sqlite"
 brew "zeromq"
 
-# dev tools
+# modern tools
+brew "bat"
+brew "exa"
 brew "fd"
 brew "fzf"
 brew "goaccess"
+brew "httpie"
 brew "jq"
+brew "procs"
 brew "the_silver_searcher"
 brew "tldr"
 brew "watch"
+
+brew "clementtsang/bottom/bottom"
 
 # CLI tools
 brew "calc"
@@ -156,7 +155,6 @@ brew "todo-txt"
 brew "trash"
 
 # editors
-# brew "macvim"
 brew "vim"
 cask "sublime-text"
 cask "visual-studio-code"
@@ -200,7 +198,6 @@ brew "youtube-dl"
 cask "alfred"
 cask "balenaetcher"
 cask "binary-ninja"
-cask "cardhop"
 cask "chatology"
 cask "cleanshot"
 cask "cryptomator"
