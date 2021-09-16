@@ -41,6 +41,7 @@ brew "crystal"
 brew "elixir"
 brew "go"
 brew "lua"
+brew "mruby"
 brew "protobuf"
 brew "r"
 brew "rebar"
@@ -240,10 +241,11 @@ cask "knockknock"
 cask "taskexplorer"
 
 # infosec tools
+cask "bluetility"
 brew "chkrootkit"
 brew "nmap"
+brew "ssh-audit"
 brew "yara"
-cask "bluetility"
 
 # chat
 brew "irssi"

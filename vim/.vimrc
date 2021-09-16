@@ -21,6 +21,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'git@github.com:ck3g/vim-change-hash-syntax.git' " :ChangeHashSyntax
 Plugin 'godlygeek/tabular'                              " :Tabularize
+Plugin 'dracula/vim'
 
 " Language Syntax Plugins
 Plugin 'vim-ruby/vim-ruby'       " CTRL-X CTRL-O insert mode for autocomplete
