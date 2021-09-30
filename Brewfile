@@ -44,7 +44,7 @@ brew "lua"
 brew "mruby"
 brew "protobuf"
 brew "r"
-brew "rebar"
+brew "rebar3"
 cask "rstudio"
 
 brew "make" # gmake
