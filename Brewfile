@@ -18,13 +18,10 @@ mas "Paprika", id: 1303222628
 mas "PiPer", id: 1421915518
 mas "PomodoroApp", id: 705103149
 mas "Quiver", id: 866773894
-mas "Tadam", id: 531349534
 mas "TableFlip", id: 1462643128
 mas "Textual", id: 1262957439
 mas "WiFi Explorer", id: 494803304
 mas "pwSafe", id: 520993579
-mas "uBlock", id: 1385985095
-# mas "Monit", id: 1014850245
 # mas "Xcode", id: 497799835
 
 # package manager
@@ -43,9 +40,7 @@ brew "go"
 brew "lua"
 brew "mruby"
 brew "protobuf"
-brew "r"
 brew "rebar3"
-cask "rstudio"
 
 brew "make" # gmake
 brew "ninja"
@@ -58,7 +53,6 @@ brew "git-lfs"
 brew "bash" # latest bash
 brew "fish"
 brew "zsh"  # default
-cask "powershell"
 brew "starship"
 
 # Use OpenJDK over Oracle Java
@@ -103,7 +97,6 @@ brew "curl"
 brew "iftop"
 brew "iperf"
 brew "mtr"
-brew "siege"
 brew "ssh-copy-id"
 brew "wget"
 brew "wrk"
@@ -126,8 +119,6 @@ brew "procs"
 brew "the_silver_searcher"
 brew "tldr"
 brew "watch"
-
-brew "clementtsang/bottom/bottom"
 
 # CLI tools
 brew "calc"
@@ -162,7 +153,6 @@ cask "visual-studio-code"
 
 # devops tools
 brew "ansible"
-# cask "chef/chef/chefdk"
 
 cask "docker"
 brew "kops"
@@ -182,7 +172,6 @@ brew "awscli"
 brew "azure-cli"
 brew "b2-tools"
 brew "doctl"
-cask "google-cloud-sdk"
 tap  "heroku/brew"
 brew "heroku/brew/heroku"
 
@@ -215,7 +204,6 @@ cask "postman"
 cask "rectangle"
 cask "rocket"
 cask "sloth"
-cask "spotify"
 cask "transmission"
 cask "turtl"
 cask "viscosity"
@@ -243,6 +231,7 @@ cask "taskexplorer"
 # infosec tools
 cask "bluetility"
 brew "chkrootkit"
+brew "masscan"
 brew "nmap"
 brew "ssh-audit"
 brew "yara"
