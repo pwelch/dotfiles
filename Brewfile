@@ -121,7 +121,6 @@ brew "tldr"
 brew "watch"
 
 # CLI tools
-brew "calc"
 brew "cmatrix"
 brew "cointop"
 brew "cowsay"
@@ -136,15 +135,18 @@ brew "lynx"
 brew "midnight-commander"
 brew "mutt"
 brew "newsboat"
-brew "pass"
 brew "reattach-to-user-namespace"
 brew "sc-im"
 brew "sl"
 brew "socat"
 brew "tig"
 brew "tmux"
-brew "todo-txt"
 brew "trash"
+
+brew "calc"
+brew "ledger"
+brew "pass"
+brew "todo-txt"
 
 # editors
 brew "vim"
