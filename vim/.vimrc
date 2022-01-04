@@ -33,6 +33,7 @@ Plugin 'tpope/vim-git'
 Plugin 'pangloss/vim-javascript'
 Plugin 'elzr/vim-json'
 Plugin 'mmalecki/vim-node.js'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 " Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
