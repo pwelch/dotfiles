@@ -9,4 +9,3 @@ export HISTFILE=~/.zsh_history
 # setup starship and command aliases
 eval "$(starship init zsh)"
 source ~/.aliases.zsh
-
