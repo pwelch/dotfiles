@@ -16,7 +16,6 @@ mas "Mindnode", id: 1289197285
 mas "Monodraw", id: 920404675
 mas "Paprika", id: 1303222628
 mas "PiPer", id: 1421915518
-mas "PomodoroApp", id: 705103149
 mas "Quiver", id: 866773894
 mas "TableFlip", id: 1462643128
 mas "Textual", id: 1262957439
@@ -32,7 +31,6 @@ brew "ruby-build"
 # asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 # languages
-cask "anaconda"
 brew "clisp"
 brew "crystal"
 brew "elixir"
@@ -129,7 +127,6 @@ brew "ddgr"
 brew "ffsend"
 brew "gnuplot"
 brew "htop-osx"
-brew "jesseduffield/horcrux/horcrux"
 brew "ipcalc"
 brew "jrnl"
 brew "lynx"

@@ -115,7 +115,8 @@ set writebackup
 " set dark background version of solarized
 " In iTerm2, in Preferences -> Profiles -> Terminal, under "Terminal Emulation" set to xterm-256color.
 set background=dark
-colorscheme solarized
+" colorscheme solarized
+colorscheme dracula
 
 "" Remove Whitespace
 augroup whitespace
