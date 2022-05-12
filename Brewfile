@@ -96,6 +96,7 @@ brew "iftop"
 brew "iperf"
 brew "mtr"
 brew "ssh-copy-id"
+brew "tcpflow"
 brew "wget"
 brew "wrk"
 
