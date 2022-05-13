@@ -156,6 +156,7 @@ cask "visual-studio-code"
 brew "ansible"
 
 cask "docker"
+brew "crane"
 brew "kops"
 brew "kubernetes-cli"
 brew "buildpacks/tap/pack"
