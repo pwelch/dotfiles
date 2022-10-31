@@ -9,16 +9,18 @@ tap "homebrew/cask"
 
 # App Store
 mas "Amphetamine", id: 937984704
-mas "Bear", id: 1091189122
 mas "Calca", id: 635758264
 mas "Drafts", id: 1435957248
+mas "GoodLinks", id: 1474335294
 mas "Mindnode", id: 1289197285
 mas "Monodraw", id: 920404675
 mas "Paprika", id: 1303222628
 mas "PiPer", id: 1421915518
 mas "Quiver", id: 866773894
 mas "TableFlip", id: 1462643128
+mas "Tailscale", id: 1475387142
 mas "Textual", id: 1262957439
+mas "The Unarchiver", id: 425424353
 mas "WiFi Explorer", id: 494803304
 mas "pwSafe", id: 520993579
 # mas "Xcode", id: 497799835
@@ -31,18 +33,17 @@ brew "ruby-build"
 # asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 # languages
-brew "clisp"
-brew "crystal"
 brew "elixir"
 brew "go"
-brew "lua"
 brew "mruby"
 brew "protobuf"
 brew "rebar3"
 
+brew "golangci-lint"
+brew "golang-migrate"
 brew "make" # gmake
 brew "ninja"
-brew 'yarn'
+brew "yarn"
 
 brew "git"
 brew "git-lfs"
@@ -122,10 +123,8 @@ brew "watch"
 
 # CLI tools
 brew "cmatrix"
-brew "cointop"
 brew "cowsay"
 brew "ddgr"
-brew "ffsend"
 brew "gnuplot"
 brew "htop-osx"
 brew "ipcalc"
@@ -159,9 +158,9 @@ cask "docker"
 brew "crane"
 brew "kops"
 brew "kubernetes-cli"
+brew "argocd"
 brew "buildpacks/tap/pack"
 
-brew "hashicorp/tap/boundary"
 brew "hashicorp/tap/consul"
 brew "hashicorp/tap/nomad"
 brew "hashicorp/tap/packer"
@@ -174,13 +173,15 @@ brew "awscli"
 brew "azure-cli"
 brew "b2-tools"
 brew "doctl"
-tap  "heroku/brew"
-brew "heroku/brew/heroku"
+cask "google-cloud-sdk"
 
 tap "TylerBrock/saw"
 brew "saw"
 
-# cask "virtualbox"
+# Sigstore tools
+tap 'sigstore/tap' # https://github.com/sigstore/homebrew-tap
+brew 'cosign'
+brew 'rekor-cli'
 
 # misc
 brew "exercism"
@@ -217,12 +218,10 @@ cask "yacreader"
 
 # music
 cask "spotify"
-cask "jqbx"
 cask "sonic-pi"
 
 # db tools
 cask "tableplus"
-# cask "dbeaver-community"
 
 # objective-see
 cask "blockblock"
@@ -239,13 +238,12 @@ brew "ssh-audit"
 brew "yara"
 
 # chat
-brew "irssi"
-brew "weechat"
+# brew "irssi"
+# brew "weechat"
+# cask "textual"
 cask "discord"
-cask "jitsi-meet"
 cask "signal"
 cask "slack"
-cask "textual"
 
 # games
 %w{ nethack vitetris zork }.each { |pkg| brew pkg }
