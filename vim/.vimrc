@@ -1,61 +1,112 @@
 " .vimrc
-"" Vundle
 set nocompatible " be iMproved, required
 filetype off     " required
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-" call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+"*****************************************************************************
+"" Vim-Plug core
+"*****************************************************************************
+let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+let curl_exists=expand('curl')
 
+if !filereadable(vimplug_exists)
+  if !executable(curl_exists)
+    echoerr "You have to install curl or first install vim-plug yourself!"
+    execute "q!"
+  endif
+  echo "Installing Vim-Plug..."
+  echo ""
+  silent exec "!"curl_exists" -fLo " . shellescape(vimplug_exists) . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+  let g:not_finish_vimplug = "yes"
+
+  autocmd VimEnter * PlugInstall
+endif
+
+" Required:
+call plug#begin(expand('~/.vim/plugged'))
+
+"*****************************************************************************
+"" Plug install packages
+"*****************************************************************************
 " Vim Plugins
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/base16-vim'
-Plugin 'bling/vim-airline'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'junegunn/fzf.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'git@github.com:ck3g/vim-change-hash-syntax.git' " :ChangeHashSyntax
-Plugin 'godlygeek/tabular'                              " :Tabularize
-Plugin 'dracula/vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
+Plug 'chriskempson/base16-vim'
+Plug 'git@github.com:ck3g/vim-change-hash-syntax.git' " :ChangeHashSyntax
+Plug 'godlygeek/tabular'                              " :Tabularize
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-scripts/grep.vim'
+Plug 'Yggdroot/indentLine'
 
-" Language Syntax Plugins
-Plugin 'vim-ruby/vim-ruby'       " CTRL-X CTRL-O insert mode for autocomplete
-Plugin 'tpope/vim-rails'
-Plugin 'skwp/vim-rspec'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'jimenezrick/vimerl'
-Plugin 'tpope/vim-git'
-Plugin 'pangloss/vim-javascript'
-Plugin 'elzr/vim-json'
-Plugin 'mmalecki/vim-node.js'
-Plugin 'dracula/vim', { 'name': 'dracula' }
-" Plugin 'fatih/vim-go'
+if isdirectory('/usr/local/opt/fzf')
+  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+else
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+  Plug 'junegunn/fzf.vim'
+endif
+let g:make = 'gmake'
+if exists('make')
+        let g:make = 'make'
+endif
+Plug 'Shougo/vimproc.vim', {'do': g:make}
 
-" All of your Plugins must be added before the following line
-call vundle#end()         " required
-filetype plugin indent on " required (ignore plugin indent changes)
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" colorschemes
+Plug 'dracula/vim', { 'name': 'dracula' }
 
+" Language Plugins
+" ruby
+Plug 'skwp/vim-rspec'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby' " CTRL-X CTRL-O insert mode for autocomplete
+
+" go
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+
+" elixir"
+Plug 'carlosgaldino/elixir-snippets'
+Plug 'elixir-lang/vim-elixir'
+Plug 'jimenezrick/vimerl'
+
+" javascript
+Plug 'jelera/vim-javascript-syntax'
+
+" html
+Plug 'hail2u/vim-css3-syntax'
+Plug 'gko/vim-coloresque'
+Plug 'tpope/vim-haml'
+Plug 'mattn/emmet-vim'
+
+" python
+Plug 'davidhalter/jedi-vim'
+Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+
+"" Include user's extra bundle
+if filereadable(expand("~/.vimrc.local.bundles"))
+  source ~/.vimrc.local.bundles
+endif
+
+call plug#end()
+
+" Required:
+filetype plugin indent on
+
+"*****************************************************************************
 "" Vim Preferences
+"*****************************************************************************"
 syntax enable       " Enable syntax highlighting
 set autoindent      " Automatically indent
 set autoread        " reload files when changed on disk, i.e. via `git checkout`
 set backspace=2     " Fix broken backspace in some setups
 set copyindent      " Copy the previous line's indenting
 set cursorline      " highlight current line
-set encoding=utf-8  " encoding to UTF-8
 set expandtab       " always uses spaces instead of tab characters
 set ignorecase      " Ignore case when searching
 set incsearch       " Show search matches incrementally
@@ -64,6 +115,7 @@ set nohlsearch      " Highlight search terms
 set nolist          " Turn off `set list` by default
 set number          " Enable line numbers
 set paste           " Default to paste insert
+set ruler
 set shiftwidth=2    " size of an "indent"
 set showcmd         " show command in bottom bar
 set showmatch       " highlight matching [{()}]
@@ -74,12 +126,33 @@ set tabstop=2       " number of visual spaces per TAB
 set visualbell      " Use visual bell (no beeping)
 set wildmenu        " visual autocomplete for command menu
 
+" Encoding - encoding to UTF-8
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set ttyfast
+
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 
 "" Custom Maps
 " Ensure default leader is set to \
+" let mapleader=','
 let mapleader = "\\"
+
+"" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set fileformats=unix,dos,mac
+
+if exists('$SHELL')
+    set shell=$SHELL
+else
+    set shell=/bin/sh
+endif
 
 " Reset highlighted search with enter
 nnoremap <CR> :let @/=""<CR><CR>
@@ -92,7 +165,9 @@ map <C-b> :ls<CR>
 " Set working directory to the current file
 " autocmd BufEnter * lcd %:p:h
 
+"*****************************************************************************
 "" Plugin Configurations and Maps
+"*****************************************************************************"
 " Enable vim-airline bar all the time
 set laststatus=2
 " Map CtrlP to Ctrl+p
