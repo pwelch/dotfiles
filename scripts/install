@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # Install plug-ins
 
-set -e
+set -e          # exit on error
+set -o pipefail # exit on any command in pipeline
+set -x          # verbose
 
 # Helper functions
 info () {
@@ -59,5 +61,5 @@ install_vundle() {
   fi
 }
 
-install_ohmyzsh
+# install_ohmyzsh
 install_vundle
