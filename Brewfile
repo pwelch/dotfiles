@@ -25,6 +25,12 @@ mas "WiFi Explorer", id: 494803304
 mas "pwSafe", id: 520993579
 # mas "Xcode", id: 497799835
 
+brew 'firefox'
+
+# Notes
+cask 'obsidian'
+cask 'standard-notes'
+
 # package manager
 brew "asdf"
 brew "ruby-build"
@@ -176,13 +182,22 @@ brew "b2-tools"
 brew "doctl"
 cask "google-cloud-sdk"
 
-tap "TylerBrock/saw"
-brew "saw"
+brew 'chart-testing' # Helm Chart Testing
 
+## Supply Chain Security
 # Sigstore tools
 tap 'sigstore/tap' # https://github.com/sigstore/homebrew-tap
 brew 'cosign'
 brew 'rekor-cli'
+
+brew 'step'    # crypto/pki | analyzing certificates
+brew 'crane'   # container image tool
+
+# generating SBOMs
+tap 'anchore/syft'
+brew 'syft'
+
+## ---
 
 # misc
 brew "exercism"

@@ -2,7 +2,7 @@
 // Settings in here override those in "Default/Preferences.sublime-settings",
 // and are overridden in turn by syntax-specific settings.
 {
-  "color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+  //"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
   "dictionary": "Packages/Language - English/en_US.dic",
   "font_size": 18,
   "spell_check": true,
