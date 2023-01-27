@@ -48,6 +48,8 @@ brew "yarn"
 brew "git"
 brew "git-lfs"
 
+brew "jupyterlab"
+
 # shells
 brew "bash" # latest bash
 brew "fish"
@@ -82,7 +84,6 @@ brew "readline"
 brew "shellcheck"
 brew "stow"
 brew "tree"
-brew "unrar"
 brew "yamllint"
 
 # required for python
@@ -112,7 +113,6 @@ brew "bat"
 brew "exa"
 brew "fd"
 brew "fzf"
-brew "glow"
 brew "goaccess"
 brew "httpie"
 brew "jq"
@@ -121,6 +121,9 @@ brew "procs"
 brew "the_silver_searcher"
 brew "tldr"
 brew "watch"
+
+brew "glow"
+brew "vhs"
 
 # CLI tools
 brew "cmatrix"
@@ -159,6 +162,8 @@ cask "docker"
 brew "crane"
 brew "kops"
 brew "kubernetes-cli"
+brew "k9s"
+brew "lens"
 brew "argocd"
 brew "buildpacks/tap/pack"
 
