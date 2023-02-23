@@ -161,11 +161,16 @@ cask "visual-studio-code"
 # devops tools
 brew "ansible"
 
-cask "docker"
+brew "argocd"
 brew "crane"
+brew "helm"
+brew "kind"
 brew "kops"
 brew "kubernetes-cli"
-brew "argocd"
+brew "k9s"
+cask "docker"
+# brew "lens"
+
 brew "buildpacks/tap/pack"
 
 brew "hashicorp/tap/consul"
