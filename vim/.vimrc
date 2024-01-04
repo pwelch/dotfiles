@@ -32,7 +32,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
-Plug 'git@github.com:ck3g/vim-change-hash-syntax.git' " :ChangeHashSyntax
 Plug 'godlygeek/tabular'                              " :Tabularize
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
