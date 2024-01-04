@@ -110,7 +110,7 @@ brew "zeromq"
 
 # modern tools
 brew "bat"
-brew "exa"
+brew "eza"
 brew "fd"
 brew "fzf"
 brew "goaccess"
