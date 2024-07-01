@@ -56,9 +56,8 @@ brew "fish"
 brew "zsh"  # default
 brew "starship"
 
-# Use OpenJDK over Oracle Java
-tap "AdoptOpenJDK/openjdk"
-cask "adoptopenjdk11"
+# JVM
+brew "temurin"
 
 # tools
 brew "ack"
@@ -102,13 +101,10 @@ brew "tcpflow"
 brew "wget"
 brew "wrk"
 
-# cask "ipfs"
-
 # services
 brew "sqlite"
-brew "zeromq"
 
-# modern tools
+# tools
 brew "bat"
 brew "eza"
 brew "fd"
@@ -152,6 +148,7 @@ brew "todo-txt"
 
 # editors
 brew "vim"
+brew "neovim"
 cask "sublime-text"
 cask "visual-studio-code"
 
@@ -165,24 +162,22 @@ brew "kubernetes-cli"
 brew "k9s"
 brew "lens"
 brew "argocd"
-brew "buildpacks/tap/pack"
+# brew "buildpacks/tap/pack"
 
 brew "hashicorp/tap/consul"
-brew "hashicorp/tap/nomad"
 brew "hashicorp/tap/packer"
-brew "hashicorp/tap/waypoint"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
+# brew "hashicorp/tap/nomad"
+# brew "hashicorp/tap/waypoint"
 # cask "vagrant"
 
+# cloud CLIs
 brew "awscli"
 brew "azure-cli"
 brew "b2-tools"
 brew "doctl"
 cask "google-cloud-sdk"
-
-tap "TylerBrock/saw"
-brew "saw"
 
 # Sigstore tools
 tap 'sigstore/tap' # https://github.com/sigstore/homebrew-tap
@@ -191,14 +186,12 @@ brew 'rekor-cli'
 
 # misc
 brew "exercism"
-brew "youtube-dl"
+brew "yt-dlp"
 
 # casks
 cask "alfred"
 cask "balenaetcher"
-cask "bartender"
 cask "binary-ninja"
-cask "chatology"
 cask "cleanshot"
 cask "cryptomator"
 cask "cyberduck"
