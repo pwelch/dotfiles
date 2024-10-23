@@ -33,3 +33,8 @@ eval "$(starship init zsh)"
 
 # load zsh aliases
 source ~/.aliases.zsh
+
+eval "$(github-copilot-cli alias -- "$0")"
+
+# Go
+export GO111MODULE=auto
