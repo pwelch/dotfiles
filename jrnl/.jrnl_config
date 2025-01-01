@@ -11,9 +11,8 @@
     "default": "~/code/notebook/journal.txt",
     "work": "~/code/notebook/worklog.txt",
     "research": "~/code/notebook/research.txt",
-    "dayone": "~/Backups/Journal.dayone",
     "daily": {
-      "journal": "~/keybase_folder/kaizen/retro.txt",
+      "journal": "~/Documents/notebook/journal.txt",
       "encrypt": true
     }
   }

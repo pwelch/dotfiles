@@ -56,6 +56,11 @@ brew "fish"
 brew "zsh"  # default
 brew "starship"
 
+# terminals
+brew "ghostty"
+cask "iterm2"
+brew "tmux"
+
 # JVM
 brew "temurin"
 
@@ -138,7 +143,6 @@ brew "sc-im"
 brew "sl"
 brew "socat"
 brew "tig"
-brew "tmux"
 brew "trash"
 
 brew "calc"
@@ -180,9 +184,9 @@ brew "doctl"
 cask "google-cloud-sdk"
 
 # Sigstore tools
-tap 'sigstore/tap' # https://github.com/sigstore/homebrew-tap
-brew 'cosign'
-brew 'rekor-cli'
+# tap 'sigstore/tap' # https://github.com/sigstore/homebrew-tap
+# brew 'cosign'
+# brew 'rekor-cli'
 
 # misc
 brew "exercism"
@@ -200,7 +204,6 @@ cask "disk-inventory-x"
 cask "drawio"
 cask "gpg-suite"
 cask "istat-menus"
-cask "iterm2"
 cask "mountain-duck"
 cask "netnewswire"
 cask "plex-media-player"
