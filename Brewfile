@@ -223,6 +223,10 @@ cask "sonic-pi"
 # db tools
 cask "tableplus"
 
+# macOS tools
+brew "suspicious-package"
+brew "apparency"
+
 # objective-see
 cask "blockblock"
 cask "kextviewr"

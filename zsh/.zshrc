@@ -8,6 +8,10 @@ setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 setopt share_history          # share command history data
 
+# Use ANSI color sequences to distinguish file types.
+# LSCOLORS sets colors
+export CLICOLOR=1
+
 # history file configuration
 export HISTSIZE=10000
 export SAVEHIST=10000
