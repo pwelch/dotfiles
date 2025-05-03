@@ -26,11 +26,9 @@ bindkey '^R' history-incremental-search-backward
 # set PATH
 export PATH=$PATH:~/bin:~/go/bin
 
-# setup asdf version manager installed via Homebrew
-# . /opt/homebrew/opt/asdf/asdf.sh
-
-# asdf manually installed
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# setup asdf version manager
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
 # setup starship and command aliases
 eval "$(starship init zsh)"
