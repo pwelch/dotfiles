@@ -15,12 +15,3 @@ stow git jrnl ruby tmux vim zsh --verbose
 scripts/install
 ```
 
-This will symlink the appropriate files in `.dotfiles` to your home
-directory.
-
-Everything is configured and tweaked within `~/.dotfiles`.
-
-## External Programs
-
-* [GNU Stow](https://www.gnu.org/software/stow/)
-* [Jrnl](https://maebert.github.io/jrnl/)
