@@ -1,2 +1,0 @@
-language-chef
-vim-mode

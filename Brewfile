@@ -42,11 +42,12 @@ brew "rebar3"
 brew "golangci-lint"
 brew "golang-migrate"
 brew "make" # gmake
-brew "ninja"
 brew "yarn"
 
+# vcs
 brew "git"
 brew "git-lfs"
+brew "tig"
 
 brew "jupyterlab"
 
@@ -61,34 +62,40 @@ brew "ghostty"
 cask "iterm2"
 brew "tmux"
 
-# JVM
-brew "temurin"
-
 # tools
 brew "ack"
+brew "bat"
 brew "coreutils"
 brew "direnv"
 brew "envchain"
+brew "eza"
+brew "fd"
 brew "ffmpeg"
+brew "fzf"
 brew "gdb"
-brew "gh"
 brew "gnu-sed"
 brew "gnu-tar"  # required for fpm
+brew "goaccess"
 brew "gpg"
 brew "graphviz"
-brew "hugo"
 brew "imagemagick"
+brew "jq"
 brew "mas"
 brew "openssl"
 brew "pandoc"
 brew "pidof"
 brew "plantuml"
+brew "procs"
 brew "pwgen"
 brew "readline"
 brew "shellcheck"
 brew "stow"
+brew "the_silver_searcher"
+brew "tldr"
 brew "tree"
+brew "watch"
 brew "yamllint"
+brew "yq"
 
 # required for python
 # sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
@@ -98,9 +105,11 @@ brew "zlib"
 
 # network
 brew "curl"
+brew "httpie"
 brew "iftop"
 brew "iperf"
 brew "mtr"
+brew "socat"
 brew "ssh-copy-id"
 brew "tcpflow"
 brew "wget"
@@ -109,31 +118,14 @@ brew "wrk"
 # services
 brew "sqlite"
 
-# tools
-brew "bat"
-brew "eza"
-brew "fd"
-brew "fzf"
-brew "goaccess"
-brew "httpie"
-brew "jq"
-brew "yq"
-brew "procs"
-brew "the_silver_searcher"
-brew "tldr"
-brew "watch"
-
-brew "glow"
-brew "vhs"
-
 # CLI tools
 brew "cmatrix"
 brew "cowsay"
 brew "ddgr"
+brew "glow"
 brew "gnuplot"
 brew "htop-osx"
 brew "ipcalc"
-brew "jrnl"
 brew "lynx"
 brew "midnight-commander"
 brew "mutt"
@@ -141,11 +133,11 @@ brew "newsboat"
 brew "reattach-to-user-namespace"
 brew "sc-im"
 brew "sl"
-brew "socat"
-brew "tig"
 brew "trash"
+brew "vhs"
 
 brew "calc"
+brew "jrnl"
 brew "ledger"
 brew "pass"
 brew "todo-txt"
@@ -179,14 +171,7 @@ brew "hashicorp/tap/vault"
 # cloud CLIs
 brew "awscli"
 brew "azure-cli"
-brew "b2-tools"
-brew "doctl"
 cask "google-cloud-sdk"
-
-# Sigstore tools
-# tap 'sigstore/tap' # https://github.com/sigstore/homebrew-tap
-# brew 'cosign'
-# brew 'rekor-cli'
 
 # misc
 brew "exercism"
@@ -195,7 +180,7 @@ brew "yt-dlp"
 # casks
 cask "alfred"
 cask "balenaetcher"
-cask "binary-ninja"
+cask "binary-ninja-free"
 cask "cleanshot"
 cask "cryptomator"
 cask "cyberduck"
@@ -214,7 +199,6 @@ cask "transmission"
 cask "turtl"
 cask "viscosity"
 cask "vlc"
-cask "yacreader"
 
 # Unsupported in 10.15
 # cask "zterm"

@@ -1,0 +1,83 @@
+" .vimrc
+set nocompatible " be iMproved, required
+filetype off     " required
+
+"*****************************************************************************
+"" Vim Preferences
+"*****************************************************************************"
+syntax enable       " Enable syntax highlighting
+set autoindent      " Automatically indent
+set autoread        " reload files when changed on disk, i.e. via `git checkout`
+set backspace=2     " Fix broken backspace in some setups
+set copyindent      " Copy the previous line's indenting
+set cursorline      " highlight current line
+set expandtab       " always uses spaces instead of tab characters
+set ignorecase      " Ignore case when searching
+set incsearch       " Show search matches incrementally
+set modeline        " use vim modelines
+set nohlsearch      " Highlight search terms
+set nolist          " Turn off `set list` by default
+set number          " Enable line numbers
+set paste           " Default to paste insert
+set ruler           " show line and column number of cursor position
+set shiftwidth=2    " size of an "indent"
+set showcmd         " show command in bottom bar
+set showmatch       " highlight matching [{()}]
+set smarttab        " make "tab" insert indents instead of tabs at the beginning of a line
+set softtabstop=2   " number of spaces in tab when editing
+set spell           " Turn on spell check
+set tabstop=2       " number of visual spaces per TAB
+set visualbell      " Use visual bell (no beeping)
+set wildmenu        " visual autocomplete for command menu
+
+" Encoding - encoding to UTF-8
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set ttyfast
+
+" Enable basic mouse behavior such as resizing buffers.
+set mouse=a
+
+"" Custom Maps
+" Ensure default leader is set to \
+" let mapleader=','
+let mapleader = "\\"
+
+"" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set fileformats=unix,dos,mac
+
+if exists('$SHELL')
+  set shell=$SHELL
+else
+  set shell=/bin/sh
+endif
+
+" Reset highlighted search with enter
+nnoremap <CR> :let @/=""<CR><CR>
+" Shortcut to list buffers
+map <C-b> :ls<CR>
+
+"" Backups
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+
+"" Set Color Scheme
+colorscheme habamax
+
+"" Remove Whitespace
+augroup whitespace
+  autocmd BufWritePre * :%s/\s\+$//e
+augroup END
+" Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+match ExtraWhitespace /\s\+$/
+
