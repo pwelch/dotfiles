@@ -6,7 +6,7 @@ end
 
 desc 'Run GNU Stow'
 task :stow do
-  dotfiles = %w{asdf git jrnl ruby tmux vim zsh}
+  dotfiles = %w{asdf git ruby tmux vim zsh}
   system("stow #{dotfiles.join(' ')} --verbose")
 end
 

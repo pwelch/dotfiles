@@ -6,10 +6,12 @@
 git clone https://github.com/pwelch/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
+# install packages
 brew bundle
 
-# Setup dotfiles. Use --no for no action
-stow git jrnl ruby tmux vim zsh --verbose
+# link dotfiles
+bundle install
+bundle exec rake stow
 
 # run install script to install oh-my-zsh & vundle/vim plugins
 scripts/install

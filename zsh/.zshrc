@@ -17,6 +17,12 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILE=~/.zsh_history
 
+# Env vars
+export EDITOR=nvim
+export VISUAL=nvim
+export PAGER=less
+export BROWSER=open
+
 # vim mode
 bindkey -v
 
