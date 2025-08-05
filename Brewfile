@@ -1,3 +1,4 @@
+# vim: set filetype=ruby
 # Brewfile: https://github.com/Homebrew/homebrew-bundle
 
 # xcode-select --install
@@ -5,7 +6,6 @@
 # brew bundle --verbose
 
 cask_args appdir: "/Applications"
-tap "homebrew/cask"
 
 # App Store
 mas "Amphetamine", id: 937984704
@@ -28,9 +28,6 @@ mas "pwSafe", id: 520993579
 # package manager
 brew "asdf"
 brew "ruby-build"
-# asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-# asdf plugin-add python https://github.com/danhper/asdf-python.git
-# asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 # languages
 brew "elixir"
@@ -58,7 +55,6 @@ brew "zsh"  # default
 brew "starship"
 
 # terminals
-brew "ghostty"
 cask "iterm2"
 brew "tmux"
 
@@ -83,15 +79,14 @@ brew "jq"
 brew "mas"
 brew "openssl"
 brew "pandoc"
-brew "pidof"
 brew "plantuml"
 brew "procs"
 brew "pwgen"
 brew "readline"
 brew "shellcheck"
 brew "stow"
+brew "sqlite"
 brew "the_silver_searcher"
-brew "tldr"
 brew "tree"
 brew "watch"
 brew "yamllint"
@@ -114,9 +109,6 @@ brew "ssh-copy-id"
 brew "tcpflow"
 brew "wget"
 brew "wrk"
-
-# services
-brew "sqlite"
 
 # CLI tools
 brew "cmatrix"
@@ -156,14 +148,17 @@ brew "crane"
 brew "kops"
 brew "kubernetes-cli"
 brew "k9s"
-brew "lens"
-brew "argocd"
+# brew "argocd"
+# brew "lens"
 # brew "buildpacks/tap/pack"
 
-brew "hashicorp/tap/consul"
-brew "hashicorp/tap/packer"
-brew "hashicorp/tap/terraform"
-brew "hashicorp/tap/vault"
+brew "opentofu"
+brew "openbao"
+
+# brew "hashicorp/tap/consul"
+# brew "hashicorp/tap/packer"
+# brew "hashicorp/tap/terraform"
+# brew "hashicorp/tap/vault"
 # brew "hashicorp/tap/nomad"
 # brew "hashicorp/tap/waypoint"
 # cask "vagrant"
@@ -191,7 +186,6 @@ cask "gpg-suite"
 cask "istat-menus"
 cask "mountain-duck"
 cask "netnewswire"
-cask "plex-media-player"
 cask "rectangle"
 cask "rocket"
 cask "sloth"
@@ -211,8 +205,8 @@ cask "sonic-pi"
 cask "tableplus"
 
 # macOS tools
-brew "suspicious-package"
-brew "apparency"
+# brew "suspicious-package"
+# brew "apparency"
 
 # objective-see
 cask "blockblock"
@@ -237,7 +231,7 @@ cask "signal"
 cask "slack"
 
 # games
-%w{ nethack vitetris zork }.each { |pkg| brew pkg }
+%w[nethack vitetris zork].each { |pkg| brew pkg }
 
 # CLI services
 brew 'asciinema'
