@@ -1,0 +1,10 @@
+# Configuration file for Ghostty
+
+# config file location on macOS
+# /Users/<user>/Library/Application\ Support/com.mitchellh.ghostty/config
+
+# theme
+theme = Dracula
+
+# set term info for remote sessions
+shell-integration-features = ssh-terminfo, ssh-env
